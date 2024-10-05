@@ -1,1 +1,42 @@
 > mvn archetype:generate -DgroupId=com.xpertians.sample -DartifactId=sample-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+Add the POM
+> cd maven/sample-app/
+> mvn clean package
+
+For testing:
+> mvn exec:java -Dexec.mainClass="com.xpertians.sample.App"
+
+
+For generating an SBOM:
+
+For Cyclone DX:
+	        <!-- CycloneDX Maven Plugin -->
+	        <plugin>
+	            <groupId>org.cyclonedx</groupId>
+	            <artifactId>cyclonedx-maven-plugin</artifactId>
+	            <version>2.7.4</version>
+	            <executions>
+	                <execution>
+	                    <phase>package</phase>
+	                    <goals>
+	                        <goal>makeAggregateBom</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+			
+Then, generate SBOMs:
+> mvn clean package cyclonedx:makeAggregateBom
+
+Using tooling to convert the SBOM into notices:
+
+a) Using Pom2Notices.py:
+>  python3 bom2notices.py
+
+b) Using SPDX tools:
+1) convert CycloneDX into SPDX:
+https://github.com/CycloneDX/cyclonedx-cli/releases
+> ./cyclonedx-osx-x64 convert --input-format xml --output-format spdxjson --input-file target/bom.xml --output-file target/bom.spdx.json
+> java -jar tools-java-2.0.0-Alpha-jar-with-dependencies.jar convert --input-file ../target/bom.xml --output-format tag --output-file legal_attribution.txt
+

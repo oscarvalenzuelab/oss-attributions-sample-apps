@@ -56,6 +56,20 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-        </plugins>
-    </build>
+	        <!-- CycloneDX Maven Plugin -->
+	        <plugin>
+	            <groupId>org.cyclonedx</groupId>
+	            <artifactId>cyclonedx-maven-plugin</artifactId>
+	            <version>2.7.4</version>
+	            <executions>
+	                <execution>
+	                    <phase>package</phase>
+	                    <goals>
+	                        <goal>makeAggregateBom</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	        </plugin>
+	    </plugins>
+	</build>
 </project>
