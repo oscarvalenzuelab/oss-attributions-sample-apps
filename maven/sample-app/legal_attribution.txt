@@ -1,0 +1,50 @@
+Legal Notices Attribution File
+
+Package: gson
+Version: 2.8.9
+Group: com.google.code.gson
+License: Apache-2.0
+License URL: https://www.apache.org/licenses/LICENSE-2.0.txt
+
+---
+
+Package: commons-lang3
+Version: 3.12.0
+Group: org.apache.commons
+License: Apache License, Version 2.0
+License URL: https://www.apache.org/licenses/LICENSE-2.0.txt
+
+---
+
+Package: junit
+Version: 4.13.2
+Group: junit
+License: Eclipse Public License 1.0
+License URL: http://www.eclipse.org/legal/epl-v10.html
+
+---
+
+Package: hamcrest-core
+Version: 1.3
+Group: org.hamcrest
+License: New BSD License
+License URL: http://www.opensource.org/licenses/bsd-license.php
+
+---
+
+Package: slf4j-api
+Version: 1.7.32
+Group: org.slf4j
+License: MIT License
+License URL: http://www.opensource.org/licenses/mit-license.php
+
+---
+
+Package: slf4j-simple
+Version: 1.7.32
+Group: org.slf4j
+License: MIT License
+License URL: http://www.opensource.org/licenses/mit-license.php
+
+---
+

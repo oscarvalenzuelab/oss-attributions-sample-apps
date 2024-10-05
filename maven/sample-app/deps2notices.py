@@ -50,9 +50,18 @@ def fetch_pom_file(group_id, artifact_id, version):
                 url = license_elem.find("maven:url", namespaces)
                 if name is not None and url is not None:
                     license_info.append((name.text, url.text))
-            
+
+            # Check for parent POM if no license info found
             if not license_info:
-                print(f"No license information found in POM for {group_id}:{artifact_id}:{version}")
+                parent = root.find(".//maven:parent", namespaces)
+                if parent is not None:
+                    parent_group_id = parent.find("maven:groupId", namespaces).text
+                    parent_artifact_id = parent.find("maven:artifactId", namespaces).text
+                    parent_version = parent.find("maven:version", namespaces).text
+                    print(f"No license found for {group_id}:{artifact_id}:{version}. Trying parent POM: {parent_group_id}:{parent_artifact_id}:{parent_version}")
+                    return fetch_pom_file(parent_group_id, parent_artifact_id, parent_version)
+                else:
+                    print(f"No license and no parent POM found for {group_id}:{artifact_id}:{version}")
             return license_info
         
         except ET.ParseError as e:
@@ -82,7 +91,7 @@ def clean_dependency_line(line):
 def generate_attribution(input_file, output_file):
     """
     Generate a legal attribution file by fetching metadata and POM files from Maven Central.
-    This version includes detailed debugging output to identify which packages failed and why.
+    This version attempts to go up to parent POM if no license information is found in the package POM.
     """
     with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
         outfile.write("Legal Notices Attribution File\n\n")
