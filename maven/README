@@ -60,3 +60,9 @@ Add configuration:
 			</plugin>
 		
 > mvn spdx:createSPDX
+> java -jar spdx-tools/tools-java-2.0.0-Alpha-jar-with-dependencies.jar Convert target/site/com.xpertians.sample_sample-app-1.0-SNAPSHOT.spdx.json bom_attribution.txt JSON TAG
+
+
+Using dependency trees:
+> mvn dependency:list -DoutputFile=dependencies.txt
+> 
