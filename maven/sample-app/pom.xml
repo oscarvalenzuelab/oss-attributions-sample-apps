@@ -69,7 +69,44 @@
 	                    </goals>
 	                </execution>
 	            </executions>
+	            <configuration>
+	                <schemaVersion>1.4</schemaVersion>
+	                <includeBomSerialNumber>false</includeBomSerialNumber>
+	                <outputFormat>xml</outputFormat>
+	                <includeCompileScope>true</includeCompileScope> <!-- Ensure compile dependencies are included -->
+	                <includeProvidedScope>true</includeProvidedScope> <!-- Include provided scope dependencies -->
+	                <includeRuntimeScope>true</includeRuntimeScope> <!-- Include runtime scope dependencies -->
+	                <includeSystemScope>true</includeSystemScope> <!-- Include system dependencies -->
+	                <includeOptionalDependencies>true</includeOptionalDependencies> <!-- Include optional dependencies -->
+	                <includeTestScope>false</includeTestScope> <!-- Optionally include test dependencies -->
+	            </configuration>
 	        </plugin>
+	        <!-- SPDX Maven Plugin -->
+			<plugin>
+			   <groupId>org.spdx</groupId>
+			   <artifactId>spdx-maven-plugin</artifactId>
+			   <version>0.6.1</version>
+			   <executions>
+			       <execution>
+			           <id>build-spdx</id>
+			           <phase>package</phase>
+			           <goals>
+			               <goal>createSPDX</goal>
+			           </goals>
+			       </execution>
+			   </executions>
+            <configuration>
+                <outputFile>target/bom.spdx.rdf.xml</outputFile> <!-- SPDX output file -->
+                <outputFormat>RDFXML</outputFormat> <!-- Supported formats: RDFXML, JSON, TAG, YAML -->
+                <spdxVersion>SPDX-2.2</spdxVersion> <!-- Latest SPDX version -->
+                <includeDependencies>true</includeDependencies> <!-- Include transitive dependencies -->
+                <includeLicenses>true</includeLicenses> <!-- Ensure licenses are captured -->
+                <includeLicenseTexts>true</includeLicenseTexts> <!-- Include full license texts where possible -->
+                <projectName>${project.name}</projectName>
+                <projectVersion>${project.version}</projectVersion>
+                <creatorComment>Generated with SPDX Maven Plugin</creatorComment>
+            </configuration>
+			</plugin>
 	    </plugins>
 	</build>
 </project>

@@ -40,3 +40,23 @@ https://github.com/CycloneDX/cyclonedx-cli/releases
 > ./cyclonedx-osx-x64 convert --input-format xml --output-format spdxjson --input-file target/bom.xml --output-file target/bom.spdx.json
 > java -jar tools-java-2.0.0-Alpha-jar-with-dependencies.jar convert --input-file ../target/bom.xml --output-format tag --output-file legal_attribution.txt
 
+Using SPDX-Maven:
+
+Add configuration:
+	        <!-- SPDX Maven Plugin -->
+			<plugin>
+			   <groupId>org.spdx</groupId>
+			   <artifactId>spdx-maven-plugin</artifactId>
+			   <version>0.6.1</version>
+			   <executions>
+			       <execution>
+			           <id>build-spdx</id>
+			           <phase>package</phase>
+			           <goals>
+			               <goal>createSPDX</goal>
+			           </goals>
+			       </execution>
+			   </executions>
+			</plugin>
+		
+> mvn spdx:createSPDX
