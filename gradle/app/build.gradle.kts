@@ -33,17 +33,6 @@ java {
 }
 
 application {
-    // Define the main class for the application.
+    // Define the main class forhe application.
     mainClass = "org.xpertians.App"
-}
-
-spdxSbom {
-  targets {
-    // create a target named "release",
-    // this is used for the task name (spdxSbomForRelease)
-    // and output file (release.spdx.json)
-    create("release") {
-      // configure here
-    }
-  }
 }
