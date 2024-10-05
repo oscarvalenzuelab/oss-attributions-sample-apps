@@ -29,7 +29,7 @@ def fetch_package_metadata(group_id, artifact_id, version):
 
 def fetch_pom_file(group_id, artifact_id, version):
     """
-    Download and parse the POM file from Maven Central to extract license information.
+    Download and parse the POM file from Maven Central to extract license and publisher information.
     """
     group_path = group_id.replace('.', '/')
     url = f"https://repo1.maven.org/maven2/{group_path}/{artifact_id}/{version}/{artifact_id}-{version}.pom"
@@ -51,6 +51,17 @@ def fetch_pom_file(group_id, artifact_id, version):
                 if name is not None and url is not None:
                     license_info.append((name.text, url.text))
 
+            # Extract publisher information from <organization> or <developers>
+            organization = root.find(".//maven:organization/maven:name", namespaces)
+            publisher = None
+            if organization is not None:
+                publisher = organization.text
+            else:
+                # Fallback to <developers> section
+                developer = root.find(".//maven:developers/maven:developer/maven:name", namespaces)
+                if developer is not None:
+                    publisher = developer.text
+            
             # Check for parent POM if no license info found
             if not license_info:
                 parent = root.find(".//maven:parent", namespaces)
@@ -62,14 +73,15 @@ def fetch_pom_file(group_id, artifact_id, version):
                     return fetch_pom_file(parent_group_id, parent_artifact_id, parent_version)
                 else:
                     print(f"No license and no parent POM found for {group_id}:{artifact_id}:{version}")
-            return license_info
+            
+            return license_info, publisher
         
         except ET.ParseError as e:
             print(f"Error parsing POM file for {group_id}:{artifact_id}:{version}: {e}")
-            return None
+            return None, None
     else:
         print(f"Error fetching POM file for {group_id}:{artifact_id}:{version}. Status code: {response.status_code}")
-        return None
+        return None, None
 
 def clean_dependency_line(line):
     """
@@ -91,7 +103,7 @@ def clean_dependency_line(line):
 def generate_attribution(input_file, output_file):
     """
     Generate a legal attribution file by fetching metadata and POM files from Maven Central.
-    This version attempts to go up to parent POM if no license information is found in the package POM.
+    This version includes the publisher (organization) in the output.
     """
     with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
         outfile.write("Legal Notices Attribution File\n\n")
@@ -102,8 +114,8 @@ def generate_attribution(input_file, output_file):
             if group_id and artifact_id and version:
                 print(f"Processing dependency {group_id}:{artifact_id}:{version}")
                 
-                # Fetch the POM file and extract license information
-                license_info = fetch_pom_file(group_id, artifact_id, version)
+                # Fetch the POM file and extract license and publisher information
+                license_info, publisher = fetch_pom_file(group_id, artifact_id, version)
                 
                 if license_info:
                     outfile.write(f"Package: {artifact_id}\n")
@@ -113,6 +125,10 @@ def generate_attribution(input_file, output_file):
                     for name, url in license_info:
                         outfile.write(f"License: {name}\n")
                         outfile.write(f"License URL: {url}\n")
+                    
+                    # Include the publisher (if found)
+                    if publisher:
+                        outfile.write(f"Publisher: {publisher}\n")
                     
                     outfile.write("\n---\n\n")
                 else:
