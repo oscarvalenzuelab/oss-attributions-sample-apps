@@ -10,6 +10,7 @@ plugins {
     application
 	id("org.cyclonedx.bom") version "1.10.0"
 	id("org.spdx.sbom") version "0.8.0"
+	id("com.github.jk1.dependency-license-report") version "2.0"
 }
 
 repositories {
@@ -36,3 +37,14 @@ application {
     // Define the main class for the application.
     mainClass.set("org.xpertians.App")
 }
+
+licenseReport {
+    outputDir = "$buildDir/reports/dependency-license"
+
+    renderers = arrayOf(
+        com.github.jk1.license.render.JsonReportRenderer(),
+        com.github.jk1.license.render.TextReportRenderer()
+    )
+}
+
+
