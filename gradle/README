@@ -16,17 +16,4 @@ dependencies {
 
 > gradle build
 > gradle cyclonedxBom
-> ls app/build/reports/bom.*
-
-
-for SPDX, we need to specify a target:
-spdxSbom {
-  targets {
-    // create a target named "release",
-    // this is used for the task name (spdxSbomForRelease)
-    // and output file (release.spdx.json)
-    create("release") {
-      // configure here
-    }
-  }
-}
+> ls app/build/reports/bom.*x
