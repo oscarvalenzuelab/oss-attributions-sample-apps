@@ -1,0 +1,4 @@
+> Same current implementation for license data.
+
+> pip install cyclonedx-bom
+> cyclonedx-py environment --gather-license-texts --of XML > bom.xml

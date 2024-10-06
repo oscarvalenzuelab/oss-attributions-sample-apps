@@ -66,3 +66,8 @@ Add configuration:
 Using dependency trees:
 > mvn dependency:list -DoutputFile=dependencies.txt
 > 
+
+** Current documentation
+For Maven, you can use the plugin license-maven-plugin to generate the BoM for your project. 
+
+This produce an SBOM like attribution, short passed no copyright.
