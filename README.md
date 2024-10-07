@@ -7,4 +7,5 @@ The Legal Notices is a requirement to distribute software that use (consume) Ope
 
 Here are some examples for common languages and package managers on how to create notices:
 
-* Maven Projects
+* Projects using Maven
+* Projects using Gradle

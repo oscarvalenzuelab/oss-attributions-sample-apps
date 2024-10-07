@@ -1,4 +1,4 @@
-## Generating Open Source Attributions for Maven Projects
+## Generating Open Source Attributions for Projects using Maven
 
 For Maven, there's different options but the prefered is to use the CycloneDX Maven Plugin to produce a BOM file with license attestation.
 

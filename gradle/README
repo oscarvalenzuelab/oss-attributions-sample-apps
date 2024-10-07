@@ -1,19 +1,19 @@
+## Generating Open Source Attributions for Projects using Gradle
+
+For Gradle, the prefered way to produce notices is by using the CycloneDX Plugin to produce a BOM file with license attestation, to later parse and convert into a Legal Notices.
+
+The configuration below must be added into the "app/build.gradle.kts" file to enable the plugin:
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
 	id("org.cyclonedx.bom") version "1.10.0"
-	id("org.spdx.sbom") version "0.8.0"
 }
 
-
-dependencies {
-    // Use JUnit test framework.
-    testImplementation(libs.junit)
-
-    // This dependency is used by the application.
-    implementation(libs.guava)
-}
+Once the snippet has been added, we would need to run the target build and produce a BOM:
 
 > gradle build
 > gradle cyclonedxBom
-> ls app/build/reports/bom.*x
+
+Once the BOM is generated on "app/build/reports/bom.xml", the information can be parsed to produce a human readable document for Legal Notices using the sample script available <HERE>.
+> python3 bom2notices.py
