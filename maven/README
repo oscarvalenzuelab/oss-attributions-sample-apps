@@ -1,73 +1,63 @@
-> mvn archetype:generate -DgroupId=com.xpertians.sample -DartifactId=sample-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+## Generating Open Source Attributions for Maven Projects
 
-Add the POM
-> cd maven/sample-app/
-> mvn clean package
+For Maven, there's different options but the prefered is to use the CycloneDX Maven Plugin to produce a BOM file with license attestation.
 
-For testing:
-> mvn exec:java -Dexec.mainClass="com.xpertians.sample.App"
+### Using CycloneDX Maven Plugin
+Here is an example with an snippet to be added to the pom.xml file of your project:
+
+    <!-- CycloneDX Maven Plugin -->
+    <plugin>
+        <groupId>org.cyclonedx</groupId>
+        <artifactId>cyclonedx-maven-plugin</artifactId>
+        <version>2.7.4</version>
+        <executions>
+            <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>makeAggregateBom</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
 
 
-For generating an SBOM:
-
-For Cyclone DX:
-	        <!-- CycloneDX Maven Plugin -->
-	        <plugin>
-	            <groupId>org.cyclonedx</groupId>
-	            <artifactId>cyclonedx-maven-plugin</artifactId>
-	            <version>2.7.4</version>
-	            <executions>
-	                <execution>
-	                    <phase>package</phase>
-	                    <goals>
-	                        <goal>makeAggregateBom</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
-	        </plugin>
-			
-Then, generate SBOMs:
+Once the snippet has been added, we would need to run the target build:
 > mvn clean package cyclonedx:makeAggregateBom
 
-Using tooling to convert the SBOM into notices:
-
-a) Using Pom2Notices.py:
+This command will generate a bom.xml file inside the folder "target/", that can be parsed to generate a Legal Notices file. <HERE> you can obtain a simple Python script that convert the bom.xml files into a Legal Notices.
 >  python3 bom2notices.py
 
-b) Using SPDX tools:
-1) convert CycloneDX into SPDX:
-https://github.com/CycloneDX/cyclonedx-cli/releases
-> ./cyclonedx-osx-x64 convert --input-format xml --output-format spdxjson --input-file target/bom.xml --output-file target/bom.spdx.json
-> java -jar tools-java-2.0.0-Alpha-jar-with-dependencies.jar convert --input-file ../target/bom.xml --output-format tag --output-file legal_attribution.txt
 
-Using SPDX-Maven:
+### Using SPDX Maven Plugin
 
-Add configuration:
-	        <!-- SPDX Maven Plugin -->
-			<plugin>
-			   <groupId>org.spdx</groupId>
-			   <artifactId>spdx-maven-plugin</artifactId>
-			   <version>0.6.1</version>
-			   <executions>
-			       <execution>
-			           <id>build-spdx</id>
-			           <phase>package</phase>
-			           <goals>
-			               <goal>createSPDX</goal>
-			           </goals>
-			       </execution>
-			   </executions>
-			</plugin>
-		
+A similar option is to use the SPDX Maven Plugin. Still results show that the CycloneDX plugin produce more complete information.
+
+Here is an example with an snippet to be added to the pom.xml file of your project:
+    <!-- SPDX Maven Plugin -->
+	<plugin>
+	   <groupId>org.spdx</groupId>
+	   <artifactId>spdx-maven-plugin</artifactId>
+	   <version>0.6.1</version>
+	   <executions>
+	       <execution>
+	           <id>build-spdx</id>
+	           <phase>package</phase>
+	           <goals>
+	               <goal>createSPDX</goal>
+	           </goals>
+	       </execution>
+	   </executions>
+	</plugin>
+
+Once the snippet has been added, we would need to run the target build:
 > mvn spdx:createSPDX
-> java -jar spdx-tools/tools-java-2.0.0-Alpha-jar-with-dependencies.jar Convert target/site/com.xpertians.sample_sample-app-1.0-SNAPSHOT.spdx.json bom_attribution.txt JSON TAG
 
+Then you can leverage on SPDX Tools to Convert the BOM into a human redeable document (TAG based).
+> java -jar spdx-tools.jar Convert target/site/com.xpertians.sample_sample-app-1.0-SNAPSHOT.spdx.json bom_attribution.txt JSON TAG 
 
-Using dependency trees:
+### Using a dependency list from Maven
+
+Another option is to use Maven to produce a list of dependencies that later feed an script that query the package metadata from the package registry. <HERE> is an example of an script that can be used to produce a full notices.
+
 > mvn dependency:list -DoutputFile=dependencies.txt
-> 
-
-** Current documentation
-For Maven, you can use the plugin license-maven-plugin to generate the BoM for your project. 
-
-This produce an SBOM like attribution, short passed no copyright.
+> deps2notices.py
