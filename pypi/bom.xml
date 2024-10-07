@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<bom xmlns="http://cyclonedx.org/schema/bom/1.5" serialNumber="urn:uuid:2db8389f-bdb9-444e-8af2-fc124d6d9b7d" version="1">
+<bom xmlns="http://cyclonedx.org/schema/bom/1.5" serialNumber="urn:uuid:9f0a38f3-f366-446c-9e00-2eaba5ed941e" version="1">
   <metadata>
-    <timestamp>2024-10-06T05:52:36.698054+00:00</timestamp>
+    <timestamp>2024-10-07T18:54:41.644208+00:00</timestamp>
     <tools>
       <tool>
         <vendor>CycloneDX</vendor>
@@ -37,7 +37,7 @@
       <tool>
         <vendor>CycloneDX</vendor>
         <name>cyclonedx-python-lib</name>
-        <version>7.6.1</version>
+        <version>7.6.2</version>
         <externalReferences>
           <reference type="build-system">
             <url>https://github.com/CycloneDX/cyclonedx-python-lib/actions</url>
@@ -68,140 +68,24 @@
     </tools>
   </metadata>
   <components>
-    <component type="library" bom-ref="Jinja2==2.11.3">
-      <name>Jinja2</name>
-      <version>2.11.3</version>
-      <description>A very fast and expressive template engine.</description>
+    <component type="library" bom-ref="Levenshtein==0.25.1">
+      <name>Levenshtein</name>
+      <version>0.25.1</version>
+      <description>Python extension for computing string edit distances and similarities.</description>
       <licenses>
         <license>
-          <id>BSD-3-Clause</id>
+          <id>GPL-2.0-or-later</id>
         </license>
         <license>
-          <name>License :: OSI Approved :: BSD License</name>
+          <name>declared license of 'Levenshtein'</name>
+          <text content-type="text/plain">GPL</text>
         </license>
       </licenses>
-      <purl>pkg:pypi/jinja2@2.11.3</purl>
+      <purl>pkg:pypi/levenshtein@0.25.1</purl>
       <externalReferences>
-        <reference type="documentation">
-          <url>https://jinja.palletsprojects.com/</url>
-          <comment>from packaging metadata Project-URL: Documentation</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/pallets/jinja/issues</url>
-          <comment>from packaging metadata Project-URL: Issue tracker</comment>
-        </reference>
-        <reference type="other">
-          <url>https://github.com/pallets/jinja</url>
-          <comment>from packaging metadata Project-URL: Code</comment>
-        </reference>
         <reference type="website">
-          <url>https://palletsprojects.com/p/jinja/</url>
+          <url>https://github.com/rapidfuzz/Levenshtein</url>
           <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="MarkupSafe==2.0.1">
-      <name>MarkupSafe</name>
-      <version>2.0.1</version>
-      <description>Safely add untrusted strings to HTML/XML markup.</description>
-      <licenses>
-        <license>
-          <id>BSD-3-Clause</id>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/markupsafe@2.0.1</purl>
-      <externalReferences>
-        <reference type="chat">
-          <url>https://discord.gg/pallets</url>
-          <comment>from packaging metadata Project-URL: Chat</comment>
-        </reference>
-        <reference type="documentation">
-          <url>https://markupsafe.palletsprojects.com/</url>
-          <comment>from packaging metadata Project-URL: Documentation</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/pallets/markupsafe/issues/</url>
-          <comment>from packaging metadata Project-URL: Issue Tracker</comment>
-        </reference>
-        <reference type="other">
-          <url>https://github.com/pallets/markupsafe/</url>
-          <comment>from packaging metadata Project-URL: Source Code</comment>
-        </reference>
-        <reference type="other">
-          <url>https://palletsprojects.com/donate</url>
-          <comment>from packaging metadata Project-URL: Donate</comment>
-        </reference>
-        <reference type="other">
-          <url>https://twitter.com/PalletsTeam</url>
-          <comment>from packaging metadata Project-URL: Twitter</comment>
-        </reference>
-        <reference type="release-notes">
-          <url>https://markupsafe.palletsprojects.com/changes/</url>
-          <comment>from packaging metadata Project-URL: Changes</comment>
-        </reference>
-        <reference type="website">
-          <url>https://palletsprojects.com/p/markupsafe/</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="PyYAML==3.13">
-      <name>PyYAML</name>
-      <version>3.13</version>
-      <description>YAML parser and emitter for Python</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/pyyaml@3.13</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>http://pyyaml.org/download/pyyaml/PyYAML-3.13.tar.gz</url>
-          <comment>from packaging metadata: Download-URL</comment>
-        </reference>
-        <reference type="website">
-          <url>http://pyyaml.org/wiki/PyYAML</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="Pygments==2.18.0">
-      <name>Pygments</name>
-      <version>2.18.0</version>
-      <description>Pygments is a syntax highlighting package written in Python.</description>
-      <licenses>
-        <license>
-          <id>BSD-2-Clause</id>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/pygments@2.18.0</purl>
-      <externalReferences>
-        <reference type="documentation">
-          <url>https://pygments.org/docs</url>
-          <comment>from packaging metadata Project-URL: Documentation</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/pygments/pygments/issues</url>
-          <comment>from packaging metadata Project-URL: Bug Tracker</comment>
-        </reference>
-        <reference type="other">
-          <url>https://github.com/pygments/pygments</url>
-          <comment>from packaging metadata Project-URL: Source</comment>
-        </reference>
-        <reference type="release-notes">
-          <url>https://github.com/pygments/pygments/blob/master/CHANGES</url>
-          <comment>from packaging metadata Project-URL: Changelog</comment>
-        </reference>
-        <reference type="website">
-          <url>https://pygments.org</url>
-          <comment>from packaging metadata Project-URL: Homepage</comment>
         </reference>
       </externalReferences>
     </component>
@@ -227,27 +111,6 @@
         <reference type="other">
           <url>https://github.com/arrow-py/arrow</url>
           <comment>from packaging metadata Project-URL: Source</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="attributecode==2.0.1">
-      <name>attributecode</name>
-      <version>2.0.1</version>
-      <description>Generate attribution document with input of CSV/Excel/JSON.</description>
-      <licenses>
-        <license>
-          <name>License :: OSI Approved :: Apache Software License</name>
-        </license>
-        <license>
-          <name>declared license of 'attributecode'</name>
-          <text content-type="text/plain">UNKNOWN</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/attributecode@2.0.1</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/attributecode</url>
-          <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
     </component>
@@ -284,23 +147,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="banal==1.0.6">
-      <name>banal</name>
-      <version>1.0.6</version>
-      <description>Commons of banal micro-functions for Python.</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/banal@1.0.6</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>http://github.com/pudo/banal</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="beautifulsoup4==4.12.3">
       <name>beautifulsoup4</name>
       <version>4.12.3</version>
@@ -325,30 +171,6 @@
           <comment>from packaging metadata Project-URL: Homepage</comment>
         </reference>
       </externalReferences>
-      <properties>
-        <property name="cdx:python:package:required-extra">chardet</property>
-      </properties>
-    </component>
-    <component type="library" bom-ref="binaryornot==0.4.4">
-      <name>binaryornot</name>
-      <version>0.4.4</version>
-      <description>Ultra-lightweight pure Python package to check if a file is binary or text.</description>
-      <licenses>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-        <license>
-          <name>declared license of 'binaryornot'</name>
-          <text content-type="text/plain">BSD</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/binaryornot@0.4.4</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/audreyr/binaryornot</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
     </component>
     <component type="library" bom-ref="boolean.py==4.0">
       <name>boolean.py</name>
@@ -367,9 +189,9 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="certifi==2024.8.30">
+    <component type="library" bom-ref="certifi==2024.7.4">
       <name>certifi</name>
-      <version>2024.8.30</version>
+      <version>2024.7.4</version>
       <description>Python package for providing Mozilla's CA Bundle.</description>
       <licenses>
         <license>
@@ -379,7 +201,7 @@
           <name>License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)</name>
         </license>
       </licenses>
-      <purl>pkg:pypi/certifi@2024.8.30</purl>
+      <purl>pkg:pypi/certifi@2024.7.4</purl>
       <externalReferences>
         <reference type="other">
           <url>https://github.com/certifi/python-certifi</url>
@@ -391,16 +213,16 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="cffi==1.17.1">
+    <component type="library" bom-ref="cffi==1.16.0">
       <name>cffi</name>
-      <version>1.17.1</version>
+      <version>1.16.0</version>
       <description>Foreign Function Interface for Python calling C code.</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/cffi@1.17.1</purl>
+      <purl>pkg:pypi/cffi@1.16.0</purl>
       <externalReferences>
         <reference type="documentation">
           <url>http://cffi.readthedocs.org/</url>
@@ -534,88 +356,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="colorama==0.4.6">
-      <name>colorama</name>
-      <version>0.4.6</version>
-      <description>Cross-platform colored terminal text.</description>
-      <licenses>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/colorama@0.4.6</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/tartley/colorama</url>
-          <comment>from packaging metadata Project-URL: Homepage</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="commoncode==32.0.0">
-      <name>commoncode</name>
-      <version>32.0.0</version>
-      <description>Set of common utilities, originally split from ScanCode</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/commoncode@32.0.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/aboutcode-org/commoncode</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="container-inspector==33.0.0">
-      <name>container-inspector</name>
-      <version>33.0.0</version>
-      <description>Docker, containers, rootfs and virtual machine related software composition analysis (SCA) utilities.</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/container-inspector@33.0.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/container-inspector</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="cryptography==43.0.1">
-      <name>cryptography</name>
-      <version>43.0.1</version>
-      <description>cryptography is a package which provides cryptographic recipes and primitives to Python developers.</description>
-      <licenses>
-        <expression>Apache-2.0 OR BSD-3-Clause</expression>
-      </licenses>
-      <purl>pkg:pypi/cryptography@43.0.1</purl>
-      <externalReferences>
-        <reference type="documentation">
-          <url>https://cryptography.io/</url>
-          <comment>from packaging metadata Project-URL: documentation</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/pyca/cryptography/issues</url>
-          <comment>from packaging metadata Project-URL: issues</comment>
-        </reference>
-        <reference type="other">
-          <url>https://github.com/pyca/cryptography/</url>
-          <comment>from packaging metadata Project-URL: source</comment>
-        </reference>
-        <reference type="release-notes">
-          <url>https://cryptography.io/en/latest/changelog/</url>
-          <comment>from packaging metadata Project-URL: changelog</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/pyca/cryptography</url>
-          <comment>from packaging metadata Project-URL: homepage</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="cyclonedx-bom==4.6.1">
       <name>cyclonedx-bom</name>
       <version>4.6.1</version>
@@ -652,9 +392,9 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="cyclonedx-python-lib==7.6.1">
+    <component type="library" bom-ref="cyclonedx-python-lib==7.6.2">
       <name>cyclonedx-python-lib</name>
-      <version>7.6.1</version>
+      <version>7.6.2</version>
       <description>Python library for CycloneDX</description>
       <licenses>
         <license>
@@ -664,7 +404,7 @@
           <name>License :: OSI Approved :: Apache Software License</name>
         </license>
       </licenses>
-      <purl>pkg:pypi/cyclonedx-python-lib@7.6.1</purl>
+      <purl>pkg:pypi/cyclonedx-python-lib@7.6.2</purl>
       <externalReferences>
         <reference type="documentation">
           <url>https://cyclonedx-python-library.readthedocs.io/</url>
@@ -691,21 +431,6 @@
         <property name="cdx:python:package:required-extra">validation</property>
       </properties>
     </component>
-    <component type="library" bom-ref="debian_inspector==31.1.0">
-      <name>debian_inspector</name>
-      <version>31.1.0</version>
-      <description>Utilities to parse Debian package, copyright and control files.</description>
-      <licenses>
-        <expression>Apache-2.0 AND BSD-3-Clause AND MIT</expression>
-      </licenses>
-      <purl>pkg:pypi/debian-inspector@31.1.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/debian-inspector</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="defusedxml==0.7.1">
       <name>defusedxml</name>
       <version>0.7.1</version>
@@ -731,98 +456,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="dockerfile-parse==2.0.1">
-      <name>dockerfile-parse</name>
-      <version>2.0.1</version>
-      <description>Python library for Dockerfile manipulation</description>
-      <licenses>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-        <license>
-          <name>declared license of 'dockerfile-parse'</name>
-          <text content-type="text/plain">BSD</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/dockerfile-parse@2.0.1</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/containerbuildsystem/dockerfile-parse</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="dparse2==0.7.0">
-      <name>dparse2</name>
-      <version>0.7.0</version>
-      <description>A parser for Python dependency files</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/dparse2@0.7.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/dparse2</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="et-xmlfile==1.1.0">
-      <name>et-xmlfile</name>
-      <version>1.1.0</version>
-      <description>An implementation of lxml.xmlfile for the standard library</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/et-xmlfile@1.1.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://foss.heptapod.net/openpyxl/et_xmlfile</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="fasteners==0.19">
-      <name>fasteners</name>
-      <version>0.19</version>
-      <description>A python package that provides useful locks</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: Apache Software License</name>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/fasteners@0.19</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/harlowja/fasteners</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="fingerprints==1.2.3">
-      <name>fingerprints</name>
-      <version>1.2.3</version>
-      <description>A library to generate entity fingerprints.</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/fingerprints@1.2.3</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>http://github.com/alephdata/fingerprints</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="fqdn==1.5.1">
       <name>fqdn</name>
       <version>1.5.1</version>
@@ -844,92 +477,16 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="ftfy==6.2.3">
-      <name>ftfy</name>
-      <version>6.2.3</version>
-      <description>Fixes mojibake and other problems with Unicode, after the fact</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: Apache Software License</name>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/ftfy@6.2.3</purl>
-      <externalReferences>
-        <reference type="documentation">
-          <url>https://ftfy.readthedocs.io/en/latest/</url>
-          <comment>from packaging metadata Project-URL: Documentation</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/rspeer/python-ftfy/issues/</url>
-          <comment>from packaging metadata Project-URL: Issues</comment>
-        </reference>
-        <reference type="other">
-          <url>https://cohost.org/arborelia</url>
-          <comment>from packaging metadata Project-URL: Cohost</comment>
-        </reference>
-        <reference type="release-notes">
-          <url>https://github.com/rspeer/python-ftfy/blob/main/CHANGELOG.md</url>
-          <comment>from packaging metadata Project-URL: Changelog</comment>
-        </reference>
-        <reference type="vcs">
-          <url>https://github.com/rspeer/python-ftfy</url>
-          <comment>from packaging metadata Project-URL: Repository</comment>
-        </reference>
-        <reference type="website">
-          <url>https://ftfy.readthedocs.io/en/latest/</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="gemfileparser2==0.9.4">
-      <name>gemfileparser2</name>
-      <version>0.9.4</version>
-      <description>Parse Ruby Gemfile, .gemspec and Cocoapod .podspec files using Python.</description>
-      <licenses>
-        <expression>GPL-3.0-or-later OR MIT</expression>
-      </licenses>
-      <purl>pkg:pypi/gemfileparser2@0.9.4</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/aboutcode-org/gemfileparser2</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="html5lib==1.1">
-      <name>html5lib</name>
-      <version>1.1</version>
-      <description>HTML parser based on the WHATWG HTML specification</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-        <license>
-          <name>declared license of 'html5lib'</name>
-          <text content-type="text/plain">MIT License</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/html5lib@1.1</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/html5lib/html5lib-python</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="idna==3.10">
+    <component type="library" bom-ref="idna==3.7">
       <name>idna</name>
-      <version>3.10</version>
+      <version>3.7</version>
       <description>Internationalized Domain Names in Applications (IDNA)</description>
       <licenses>
         <license>
           <name>License :: OSI Approved :: BSD License</name>
         </license>
       </licenses>
-      <purl>pkg:pypi/idna@3.10</purl>
+      <purl>pkg:pypi/idna@3.7</purl>
       <externalReferences>
         <reference type="issue-tracker">
           <url>https://github.com/kjd/idna/issues</url>
@@ -942,61 +499,6 @@
         <reference type="release-notes">
           <url>https://github.com/kjd/idna/blob/master/HISTORY.rst</url>
           <comment>from packaging metadata Project-URL: Changelog</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="importlib_metadata==8.5.0">
-      <name>importlib_metadata</name>
-      <version>8.5.0</version>
-      <description>Read metadata from Python packages</description>
-      <licenses>
-        <license>
-          <name>License :: OSI Approved :: Apache Software License</name>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/importlib-metadata@8.5.0</purl>
-      <externalReferences>
-        <reference type="other">
-          <url>https://github.com/python/importlib_metadata</url>
-          <comment>from packaging metadata Project-URL: Source</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="intbitset==3.1.0">
-      <name>intbitset</name>
-      <version>3.1.0</version>
-      <description>C-based extension implementing fast integer bit sets.</description>
-      <licenses>
-        <license>
-          <id>LGPL-3.0-or-later</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/intbitset@3.1.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>http://github.com/inveniosoftware-contrib/intbitset/</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="isodate==0.6.1">
-      <name>isodate</name>
-      <version>0.6.1</version>
-      <description>An ISO 8601 date/time/duration parser and formatter</description>
-      <licenses>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-        <license>
-          <name>declared license of 'isodate'</name>
-          <text content-type="text/plain">BSD</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/isodate@0.6.1</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/gweis/isodate/</url>
-          <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
     </component>
@@ -1033,49 +535,28 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="jaraco.functools==4.1.0">
-      <name>jaraco.functools</name>
-      <version>4.1.0</version>
-      <description>Functools like those found in stdlib</description>
+    <component type="library" bom-ref="joblib==1.4.2">
+      <name>joblib</name>
+      <version>1.4.2</version>
+      <description>Lightweight pipelining with Python functions</description>
       <licenses>
         <license>
-          <id>MIT</id>
+          <name>License :: OSI Approved :: BSD License</name>
+        </license>
+        <license>
+          <name>declared license of 'joblib'</name>
+          <text content-type="text/plain">BSD 3-Clause</text>
         </license>
       </licenses>
-      <purl>pkg:pypi/jaraco.functools@4.1.0</purl>
+      <purl>pkg:pypi/joblib@1.4.2</purl>
       <externalReferences>
         <reference type="other">
-          <url>https://github.com/jaraco/jaraco.functools</url>
+          <url>https://github.com/joblib/joblib</url>
           <comment>from packaging metadata Project-URL: Source</comment>
         </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="javaproperties==0.8.1">
-      <name>javaproperties</name>
-      <version>0.8.1</version>
-      <description>Read &amp; write Java .properties files</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/javaproperties@0.8.1</purl>
-      <externalReferences>
-        <reference type="documentation">
-          <url>https://javaproperties.readthedocs.io</url>
-          <comment>from packaging metadata Project-URL: Documentation</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/jwodder/javaproperties/issues</url>
-          <comment>from packaging metadata Project-URL: Bug Tracker</comment>
-        </reference>
-        <reference type="other">
-          <url>https://github.com/jwodder/javaproperties</url>
-          <comment>from packaging metadata Project-URL: Source Code</comment>
-        </reference>
         <reference type="website">
-          <url>https://github.com/jwodder/javaproperties</url>
-          <comment>from packaging metadata: Home-page</comment>
+          <url>https://joblib.readthedocs.io</url>
+          <comment>from packaging metadata Project-URL: Homepage</comment>
         </reference>
       </externalReferences>
     </component>
@@ -1181,23 +662,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="jsonstreams==0.6.0">
-      <name>jsonstreams</name>
-      <version>0.6.0</version>
-      <description>A JSON streaming writer</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/jsonstreams@0.6.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/dcbaker/jsonstreams</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="license-expression==30.3.1">
       <name>license-expression</name>
       <version>30.3.1</version>
@@ -1239,65 +703,1031 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="more-itertools==10.5.0">
-      <name>more-itertools</name>
-      <version>10.5.0</version>
-      <description>More routines for operating on iterables, beyond itertools</description>
+    <component type="library" bom-ref="numpy==2.0.1">
+      <name>numpy</name>
+      <version>2.0.1</version>
+      <description>Fundamental package for array computing in Python</description>
       <licenses>
         <license>
-          <id>MIT</id>
+          <name>License :: OSI Approved :: BSD License</name>
+        </license>
+        <license>
+          <name>declared license of 'numpy'</name>
+          <text content-type="text/plain">Copyright (c) 2005-2024, NumPy Developers.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+       notice, this list of conditions and the following disclaimer.
+
+    * Redistributions in binary form must reproduce the above
+       copyright notice, this list of conditions and the following
+       disclaimer in the documentation and/or other materials provided
+       with the distribution.
+
+    * Neither the name of the NumPy Developers nor the names of any
+       contributors may be used to endorse or promote products derived
+       from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+&quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----
+
+The NumPy repository and source distributions bundle several libraries that are
+compatibly licensed.  We list these here.
+
+Name: lapack-lite
+Files: numpy/linalg/lapack_lite/*
+License: BSD-3-Clause
+  For details, see numpy/linalg/lapack_lite/LICENSE.txt
+
+Name: dragon4
+Files: numpy/_core/src/multiarray/dragon4.c
+License: MIT
+  For license text, see numpy/_core/src/multiarray/dragon4.c
+
+Name: libdivide
+Files: numpy/_core/include/numpy/libdivide/*
+License: Zlib
+  For license text, see numpy/_core/include/numpy/libdivide/LICENSE.txt
+
+
+Note that the following files are vendored in the repository and sdist but not
+installed in built numpy packages:
+
+Name: Meson
+Files: vendored-meson/meson/*
+License: Apache 2.0
+  For license text, see vendored-meson/meson/COPYING
+
+Name: spin
+Files: .spin/cmds.py
+License: BSD-3
+  For license text, see .spin/LICENSE
+
+----
+
+This binary distribution of NumPy also bundles the following software:
+
+Name: OpenBLAS
+Files: numpy/.dylibs/libopenblas*.so
+Description: bundled as a dynamically linked library
+Availability: https://github.com/OpenMathLib/OpenBLAS/
+License: BSD-3-Clause
+  Copyright (c) 2011-2014, The OpenBLAS Project
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+
+     1. Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+
+     2. Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in
+        the documentation and/or other materials provided with the
+        distribution.
+     3. Neither the name of the OpenBLAS project nor the names of
+        its contributors may be used to endorse or promote products
+        derived from this software without specific prior written
+        permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Name: LAPACK
+Files: numpy/.dylibs/libopenblas*.so
+Description: bundled in OpenBLAS
+Availability: https://github.com/OpenMathLib/OpenBLAS/
+License: BSD-3-Clause-Attribution
+  Copyright (c) 1992-2013 The University of Tennessee and The University
+                          of Tennessee Research Foundation.  All rights
+                          reserved.
+  Copyright (c) 2000-2013 The University of California Berkeley. All
+                          rights reserved.
+  Copyright (c) 2006-2013 The University of Colorado Denver.  All rights
+                          reserved.
+
+  $COPYRIGHT$
+
+  Additional copyrights may follow
+
+  $HEADER$
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer listed
+    in this license in the documentation and/or other materials
+    provided with the distribution.
+
+  - Neither the name of the copyright holders nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+  The copyright holders provide no reassurances that the source code
+  provided does not infringe any patent, copyright, or any other
+  intellectual property rights of third parties.  The copyright holders
+  disclaim any liability to any recipient for claims brought against
+  recipient by any third party for infringement of that parties
+  intellectual property rights.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Name: GCC runtime library
+Files: numpy/.dylibs/libgfortran*, numpy/.dylibs/libgcc*
+Description: dynamically linked to files compiled with gcc
+Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libgfortran
+License: GPL-3.0-with-GCC-exception
+  Copyright (C) 2002-2017 Free Software Foundation, Inc.
+
+  Libgfortran is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3, or (at your option)
+  any later version.
+
+  Libgfortran is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  Under Section 7 of GPL version 3, you are granted additional
+  permissions described in the GCC Runtime Library Exception, version
+  3.1, as published by the Free Software Foundation.
+
+  You should have received a copy of the GNU General Public License and
+  a copy of the GCC Runtime Library Exception along with this program;
+  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  &lt;http://www.gnu.org/licenses/&gt;.
+
+----
+
+Full text of license texts referred to above follows (that they are
+listed below does not necessarily imply the conditions apply to the
+present binary release):
+
+----
+
+GCC RUNTIME LIBRARY EXCEPTION
+
+Version 3.1, 31 March 2009
+
+Copyright (C) 2009 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+
+Everyone is permitted to copy and distribute verbatim copies of this
+license document, but changing it is not allowed.
+
+This GCC Runtime Library Exception (&quot;Exception&quot;) is an additional
+permission under section 7 of the GNU General Public License, version
+3 (&quot;GPLv3&quot;). It applies to a given file (the &quot;Runtime Library&quot;) that
+bears a notice placed by the copyright holder of the file stating that
+the file is governed by GPLv3 along with this Exception.
+
+When you use GCC to compile a program, GCC may combine portions of
+certain GCC header files and runtime libraries with the compiled
+program. The purpose of this Exception is to allow compilation of
+non-GPL (including proprietary) programs to use, in this way, the
+header files and runtime libraries covered by this Exception.
+
+0. Definitions.
+
+A file is an &quot;Independent Module&quot; if it either requires the Runtime
+Library for execution after a Compilation Process, or makes use of an
+interface provided by the Runtime Library, but is not otherwise based
+on the Runtime Library.
+
+&quot;GCC&quot; means a version of the GNU Compiler Collection, with or without
+modifications, governed by version 3 (or a specified later version) of
+the GNU General Public License (GPL) with the option of using any
+subsequent versions published by the FSF.
+
+&quot;GPL-compatible Software&quot; is software whose conditions of propagation,
+modification and use would permit combination with GCC in accord with
+the license of GCC.
+
+&quot;Target Code&quot; refers to output from any compiler for a real or virtual
+target processor architecture, in executable form or suitable for
+input to an assembler, loader, linker and/or execution
+phase. Notwithstanding that, Target Code does not include data in any
+format that is used as a compiler intermediate representation, or used
+for producing a compiler intermediate representation.
+
+The &quot;Compilation Process&quot; transforms code entirely represented in
+non-intermediate languages designed for human-written code, and/or in
+Java Virtual Machine byte code, into Target Code. Thus, for example,
+use of source code generators and preprocessors need not be considered
+part of the Compilation Process, since the Compilation Process can be
+understood as starting with the output of the generators or
+preprocessors.
+
+A Compilation Process is &quot;Eligible&quot; if it is done using GCC, alone or
+with other GPL-compatible software, or if it is done without using any
+work based on GCC. For example, using non-GPL-compatible Software to
+optimize any GCC intermediate representations would not qualify as an
+Eligible Compilation Process.
+
+1. Grant of Additional Permission.
+
+You have permission to propagate a work of Target Code formed by
+combining the Runtime Library with Independent Modules, even if such
+propagation would otherwise violate the terms of GPLv3, provided that
+all Target Code was generated by Eligible Compilation Processes. You
+may then convey such a combination under terms of your choice,
+consistent with the licensing of the Independent Modules.
+
+2. No Weakening of GCC Copyleft.
+
+The availability of this Exception does not imply any general
+presumption that third-party software is unaffected by the copyleft
+requirements of the license of GCC.
+
+----
+
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+                            Preamble
+
+  The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+  The licenses for most software and other practical works are designed
+to take away your freedom to share and change the works.  By contrast,
+the GNU General Public License is intended to guarantee your freedom to
+share and change all versions of a program--to make sure it remains free
+software for all its users.  We, the Free Software Foundation, use the
+GNU General Public License for most of our software; it applies also to
+any other work released this way by its authors.  You can apply it to
+your programs, too.
+
+  When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+them if you wish), that you receive source code or can get it if you
+want it, that you can change the software or use pieces of it in new
+free programs, and that you know you can do these things.
+
+  To protect your rights, we need to prevent others from denying you
+these rights or asking you to surrender the rights.  Therefore, you have
+certain responsibilities if you distribute copies of the software, or if
+you modify it: responsibilities to respect the freedom of others.
+
+  For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must pass on to the recipients the same
+freedoms that you received.  You must make sure that they, too, receive
+or can get the source code.  And you must show them these terms so they
+know their rights.
+
+  Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+giving you legal permission to copy, distribute and/or modify it.
+
+  For the developers' and authors' protection, the GPL clearly explains
+that there is no warranty for this free software.  For both users' and
+authors' sake, the GPL requires that modified versions be marked as
+changed, so that their problems will not be attributed erroneously to
+authors of previous versions.
+
+  Some devices are designed to deny users access to install or run
+modified versions of the software inside them, although the manufacturer
+can do so.  This is fundamentally incompatible with the aim of
+protecting users' freedom to change the software.  The systematic
+pattern of such abuse occurs in the area of products for individuals to
+use, which is precisely where it is most unacceptable.  Therefore, we
+have designed this version of the GPL to prohibit the practice for those
+products.  If such problems arise substantially in other domains, we
+stand ready to extend this provision to those domains in future versions
+of the GPL, as needed to protect the freedom of users.
+
+  Finally, every program is threatened constantly by software patents.
+States should not allow patents to restrict development and use of
+software on general-purpose computers, but in those that do, we wish to
+avoid the special danger that patents applied to a free program could
+make it effectively proprietary.  To prevent this, the GPL assures that
+patents cannot be used to render the program non-free.
+
+  The precise terms and conditions for copying, distribution and
+modification follow.
+
+                       TERMS AND CONDITIONS
+
+  0. Definitions.
+
+  &quot;This License&quot; refers to version 3 of the GNU General Public License.
+
+  &quot;Copyright&quot; also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+  &quot;The Program&quot; refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as &quot;you&quot;.  &quot;Licensees&quot; and
+&quot;recipients&quot; may be individuals or organizations.
+
+  To &quot;modify&quot; a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting work is called a &quot;modified version&quot; of the
+earlier work or a work &quot;based on&quot; the earlier work.
+
+  A &quot;covered work&quot; means either the unmodified Program or a work based
+on the Program.
+
+  To &quot;propagate&quot; a work means to do anything with it that, without
+permission, would make you directly or secondarily liable for
+infringement under applicable copyright law, except executing it on a
+computer or modifying a private copy.  Propagation includes copying,
+distribution (with or without modification), making available to the
+public, and in some countries other activities as well.
+
+  To &quot;convey&quot; a work means any kind of propagation that enables other
+parties to make or receive copies.  Mere interaction with a user through
+a computer network, with no transfer of a copy, is not conveying.
+
+  An interactive user interface displays &quot;Appropriate Legal Notices&quot;
+to the extent that it includes a convenient and prominently visible
+feature that (1) displays an appropriate copyright notice, and (2)
+tells the user that there is no warranty for the work (except to the
+extent that warranties are provided), that licensees may convey the
+work under this License, and how to view a copy of this License.  If
+the interface presents a list of user commands or options, such as a
+menu, a prominent item in the list meets this criterion.
+
+  1. Source Code.
+
+  The &quot;source code&quot; for a work means the preferred form of the work
+for making modifications to it.  &quot;Object code&quot; means any non-source
+form of a work.
+
+  A &quot;Standard Interface&quot; means an interface that either is an official
+standard defined by a recognized standards body, or, in the case of
+interfaces specified for a particular programming language, one that
+is widely used among developers working in that language.
+
+  The &quot;System Libraries&quot; of an executable work include anything, other
+than the work as a whole, that (a) is included in the normal form of
+packaging a Major Component, but which is not part of that Major
+Component, and (b) serves only to enable use of the work with that
+Major Component, or to implement a Standard Interface for which an
+implementation is available to the public in source code form.  A
+&quot;Major Component&quot;, in this context, means a major essential component
+(kernel, window system, and so on) of the specific operating system
+(if any) on which the executable work runs, or a compiler used to
+produce the work, or an object code interpreter used to run it.
+
+  The &quot;Corresponding Source&quot; for a work in object code form means all
+the source code needed to generate, install, and (for an executable
+work) run the object code and to modify the work, including scripts to
+control those activities.  However, it does not include the work's
+System Libraries, or general-purpose tools or generally available free
+programs which are used unmodified in performing those activities but
+which are not part of the work.  For example, Corresponding Source
+includes interface definition files associated with source files for
+the work, and the source code for shared libraries and dynamically
+linked subprograms that the work is specifically designed to require,
+such as by intimate data communication or control flow between those
+subprograms and other parts of the work.
+
+  The Corresponding Source need not include anything that users
+can regenerate automatically from other parts of the Corresponding
+Source.
+
+  The Corresponding Source for a work in source code form is that
+same work.
+
+  2. Basic Permissions.
+
+  All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the unmodified Program.  The output from running a
+covered work is covered by this License only if the output, given its
+content, constitutes a covered work.  This License acknowledges your
+rights of fair use or other equivalent, as provided by copyright law.
+
+  You may make, run and propagate covered works that you do not
+convey, without conditions so long as your license otherwise remains
+in force.  You may convey covered works to others for the sole purpose
+of having them make modifications exclusively for you, or provide you
+with facilities for running those works, provided that you comply with
+the terms of this License in conveying all material for which you do
+not control copyright.  Those thus making or running the covered works
+for you must do so exclusively on your behalf, under your direction
+and control, on terms that prohibit them from making any copies of
+your copyrighted material outside their relationship with you.
+
+  Conveying under any other circumstances is permitted solely under
+the conditions stated below.  Sublicensing is not allowed; section 10
+makes it unnecessary.
+
+  3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+  No covered work shall be deemed part of an effective technological
+measure under any applicable law fulfilling obligations under article
+11 of the WIPO copyright treaty adopted on 20 December 1996, or
+similar laws prohibiting or restricting circumvention of such
+measures.
+
+  When you convey a covered work, you waive any legal power to forbid
+circumvention of technological measures to the extent such circumvention
+is effected by exercising rights under this License with respect to
+the covered work, and you disclaim any intention to limit operation or
+modification of the work as a means of enforcing, against the work's
+users, your or third parties' legal rights to forbid circumvention of
+technological measures.
+
+  4. Conveying Verbatim Copies.
+
+  You may convey verbatim copies of the Program's source code as you
+receive it, in any medium, provided that you conspicuously and
+appropriately publish on each copy an appropriate copyright notice;
+keep intact all notices stating that this License and any
+non-permissive terms added in accord with section 7 apply to the code;
+keep intact all notices of the absence of any warranty; and give all
+recipients a copy of this License along with the Program.
+
+  You may charge any price or no price for each copy that you convey,
+and you may offer support or warranty protection for a fee.
+
+  5. Conveying Modified Source Versions.
+
+  You may convey a work based on the Program, or the modifications to
+produce it from the Program, in the form of source code under the
+terms of section 4, provided that you also meet all of these conditions:
+
+    a) The work must carry prominent notices stating that you modified
+    it, and giving a relevant date.
+
+    b) The work must carry prominent notices stating that it is
+    released under this License and any conditions added under section
+    7.  This requirement modifies the requirement in section 4 to
+    &quot;keep intact all notices&quot;.
+
+    c) You must license the entire work, as a whole, under this
+    License to anyone who comes into possession of a copy.  This
+    License will therefore apply, along with any applicable section 7
+    additional terms, to the whole of the work, and all its parts,
+    regardless of how they are packaged.  This License gives no
+    permission to license the work in any other way, but it does not
+    invalidate such permission if you have separately received it.
+
+    d) If the work has interactive user interfaces, each must display
+    Appropriate Legal Notices; however, if the Program has interactive
+    interfaces that do not display Appropriate Legal Notices, your
+    work need not make them do so.
+
+  A compilation of a covered work with other separate and independent
+works, which are not by their nature extensions of the covered work,
+and which are not combined with it such as to form a larger program,
+in or on a volume of a storage or distribution medium, is called an
+&quot;aggregate&quot; if the compilation and its resulting copyright are not
+used to limit the access or legal rights of the compilation's users
+beyond what the individual works permit.  Inclusion of a covered work
+in an aggregate does not cause this License to apply to the other
+parts of the aggregate.
+
+  6. Conveying Non-Source Forms.
+
+  You may convey a covered work in object code form under the terms
+of sections 4 and 5, provided that you also convey the
+machine-readable Corresponding Source under the terms of this License,
+in one of these ways:
+
+    a) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by the
+    Corresponding Source fixed on a durable physical medium
+    customarily used for software interchange.
+
+    b) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by a
+    written offer, valid for at least three years and valid for as
+    long as you offer spare parts or customer support for that product
+    model, to give anyone who possesses the object code either (1) a
+    copy of the Corresponding Source for all the software in the
+    product that is covered by this License, on a durable physical
+    medium customarily used for software interchange, for a price no
+    more than your reasonable cost of physically performing this
+    conveying of source, or (2) access to copy the
+    Corresponding Source from a network server at no charge.
+
+    c) Convey individual copies of the object code with a copy of the
+    written offer to provide the Corresponding Source.  This
+    alternative is allowed only occasionally and noncommercially, and
+    only if you received the object code with such an offer, in accord
+    with subsection 6b.
+
+    d) Convey the object code by offering access from a designated
+    place (gratis or for a charge), and offer equivalent access to the
+    Corresponding Source in the same way through the same place at no
+    further charge.  You need not require recipients to copy the
+    Corresponding Source along with the object code.  If the place to
+    copy the object code is a network server, the Corresponding Source
+    may be on a different server (operated by you or a third party)
+    that supports equivalent copying facilities, provided you maintain
+    clear directions next to the object code saying where to find the
+    Corresponding Source.  Regardless of what server hosts the
+    Corresponding Source, you remain obligated to ensure that it is
+    available for as long as needed to satisfy these requirements.
+
+    e) Convey the object code using peer-to-peer transmission, provided
+    you inform other peers where the object code and Corresponding
+    Source of the work are being offered to the general public at no
+    charge under subsection 6d.
+
+  A separable portion of the object code, whose source code is excluded
+from the Corresponding Source as a System Library, need not be
+included in conveying the object code work.
+
+  A &quot;User Product&quot; is either (1) a &quot;consumer product&quot;, which means any
+tangible personal property which is normally used for personal, family,
+or household purposes, or (2) anything designed or sold for incorporation
+into a dwelling.  In determining whether a product is a consumer product,
+doubtful cases shall be resolved in favor of coverage.  For a particular
+product received by a particular user, &quot;normally used&quot; refers to a
+typical or common use of that class of product, regardless of the status
+of the particular user or of the way in which the particular user
+actually uses, or expects or is expected to use, the product.  A product
+is a consumer product regardless of whether the product has substantial
+commercial, industrial or non-consumer uses, unless such uses represent
+the only significant mode of use of the product.
+
+  &quot;Installation Information&quot; for a User Product means any methods,
+procedures, authorization keys, or other information required to install
+and execute modified versions of a covered work in that User Product from
+a modified version of its Corresponding Source.  The information must
+suffice to ensure that the continued functioning of the modified object
+code is in no case prevented or interfered with solely because
+modification has been made.
+
+  If you convey an object code work under this section in, or with, or
+specifically for use in, a User Product, and the conveying occurs as
+part of a transaction in which the right of possession and use of the
+User Product is transferred to the recipient in perpetuity or for a
+fixed term (regardless of how the transaction is characterized), the
+Corresponding Source conveyed under this section must be accompanied
+by the Installation Information.  But this requirement does not apply
+if neither you nor any third party retains the ability to install
+modified object code on the User Product (for example, the work has
+been installed in ROM).
+
+  The requirement to provide Installation Information does not include a
+requirement to continue to provide support service, warranty, or updates
+for a work that has been modified or installed by the recipient, or for
+the User Product in which it has been modified or installed.  Access to a
+network may be denied when the modification itself materially and
+adversely affects the operation of the network or violates the rules and
+protocols for communication across the network.
+
+  Corresponding Source conveyed, and Installation Information provided,
+in accord with this section must be in a format that is publicly
+documented (and with an implementation available to the public in
+source code form), and must require no special password or key for
+unpacking, reading or copying.
+
+  7. Additional Terms.
+
+  &quot;Additional permissions&quot; are terms that supplement the terms of this
+License by making exceptions from one or more of its conditions.
+Additional permissions that are applicable to the entire Program shall
+be treated as though they were included in this License, to the extent
+that they are valid under applicable law.  If additional permissions
+apply only to part of the Program, that part may be used separately
+under those permissions, but the entire Program remains governed by
+this License without regard to the additional permissions.
+
+  When you convey a copy of a covered work, you may at your option
+remove any additional permissions from that copy, or from any part of
+it.  (Additional permissions may be written to require their own
+removal in certain cases when you modify the work.)  You may place
+additional permissions on material, added by you to a covered work,
+for which you have or can give appropriate copyright permission.
+
+  Notwithstanding any other provision of this License, for material you
+add to a covered work, you may (if authorized by the copyright holders of
+that material) supplement the terms of this License with terms:
+
+    a) Disclaiming warranty or limiting liability differently from the
+    terms of sections 15 and 16 of this License; or
+
+    b) Requiring preservation of specified reasonable legal notices or
+    author attributions in that material or in the Appropriate Legal
+    Notices displayed by works containing it; or
+
+    c) Prohibiting misrepresentation of the origin of that material, or
+    requiring that modified versions of such material be marked in
+    reasonable ways as different from the original version; or
+
+    d) Limiting the use for publicity purposes of names of licensors or
+    authors of the material; or
+
+    e) Declining to grant rights under trademark law for use of some
+    trade names, trademarks, or service marks; or
+
+    f) Requiring indemnification of licensors and authors of that
+    material by anyone who conveys the material (or modified versions of
+    it) with contractual assumptions of liability to the recipient, for
+    any liability that these contractual assumptions directly impose on
+    those licensors and authors.
+
+  All other non-permissive additional terms are considered &quot;further
+restrictions&quot; within the meaning of section 10.  If the Program as you
+received it, or any part of it, contains a notice stating that it is
+governed by this License along with a term that is a further
+restriction, you may remove that term.  If a license document contains
+a further restriction but permits relicensing or conveying under this
+License, you may add to a covered work material governed by the terms
+of that license document, provided that the further restriction does
+not survive such relicensing or conveying.
+
+  If you add terms to a covered work in accord with this section, you
+must place, in the relevant source files, a statement of the
+additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.
+
+  Additional terms, permissive or non-permissive, may be stated in the
+form of a separately written license, or stated as exceptions;
+the above requirements apply either way.
+
+  8. Termination.
+
+  You may not propagate or modify a covered work except as expressly
+provided under this License.  Any attempt otherwise to propagate or
+modify it is void, and will automatically terminate your rights under
+this License (including any patent licenses granted under the third
+paragraph of section 11).
+
+  However, if you cease all violation of this License, then your
+license from a particular copyright holder is reinstated (a)
+provisionally, unless and until the copyright holder explicitly and
+finally terminates your license, and (b) permanently, if the copyright
+holder fails to notify you of the violation by some reasonable means
+prior to 60 days after the cessation.
+
+  Moreover, your license from a particular copyright holder is
+reinstated permanently if the copyright holder notifies you of the
+violation by some reasonable means, this is the first time you have
+received notice of violation of this License (for any work) from that
+copyright holder, and you cure the violation prior to 30 days after
+your receipt of the notice.
+
+  Termination of your rights under this section does not terminate the
+licenses of parties who have received copies or rights from you under
+this License.  If your rights have been terminated and not permanently
+reinstated, you do not qualify to receive new licenses for the same
+material under section 10.
+
+  9. Acceptance Not Required for Having Copies.
+
+  You are not required to accept this License in order to receive or
+run a copy of the Program.  Ancillary propagation of a covered work
+occurring solely as a consequence of using peer-to-peer transmission
+to receive a copy likewise does not require acceptance.  However,
+nothing other than this License grants you permission to propagate or
+modify any covered work.  These actions infringe copyright if you do
+not accept this License.  Therefore, by modifying or propagating a
+covered work, you indicate your acceptance of this License to do so.
+
+  10. Automatic Licensing of Downstream Recipients.
+
+  Each time you convey a covered work, the recipient automatically
+receives a license from the original licensors, to run, modify and
+propagate that work, subject to this License.  You are not responsible
+for enforcing compliance by third parties with this License.
+
+  An &quot;entity transaction&quot; is a transaction transferring control of an
+organization, or substantially all assets of one, or subdividing an
+organization, or merging organizations.  If propagation of a covered
+work results from an entity transaction, each party to that
+transaction who receives a copy of the work also receives whatever
+licenses to the work the party's predecessor in interest had or could
+give under the previous paragraph, plus a right to possession of the
+Corresponding Source of the work from the predecessor in interest, if
+the predecessor has it or can get it with reasonable efforts.
+
+  You may not impose any further restrictions on the exercise of the
+rights granted or affirmed under this License.  For example, you may
+not impose a license fee, royalty, or other charge for exercise of
+rights granted under this License, and you may not initiate litigation
+(including a cross-claim or counterclaim in a lawsuit) alleging that
+any patent claim is infringed by making, using, selling, offering for
+sale, or importing the Program or any portion of it.
+
+  11. Patents.
+
+  A &quot;contributor&quot; is a copyright holder who authorizes use under this
+License of the Program or a work on which the Program is based.  The
+work thus licensed is called the contributor's &quot;contributor version&quot;.
+
+  A contributor's &quot;essential patent claims&quot; are all patent claims
+owned or controlled by the contributor, whether already acquired or
+hereafter acquired, that would be infringed by some manner, permitted
+by this License, of making, using, or selling its contributor version,
+but do not include claims that would be infringed only as a
+consequence of further modification of the contributor version.  For
+purposes of this definition, &quot;control&quot; includes the right to grant
+patent sublicenses in a manner consistent with the requirements of
+this License.
+
+  Each contributor grants you a non-exclusive, worldwide, royalty-free
+patent license under the contributor's essential patent claims, to
+make, use, sell, offer for sale, import and otherwise run, modify and
+propagate the contents of its contributor version.
+
+  In the following three paragraphs, a &quot;patent license&quot; is any express
+agreement or commitment, however denominated, not to enforce a patent
+(such as an express permission to practice a patent or covenant not to
+sue for patent infringement).  To &quot;grant&quot; such a patent license to a
+party means to make such an agreement or commitment not to enforce a
+patent against the party.
+
+  If you convey a covered work, knowingly relying on a patent license,
+and the Corresponding Source of the work is not available for anyone
+to copy, free of charge and under the terms of this License, through a
+publicly available network server or other readily accessible means,
+then you must either (1) cause the Corresponding Source to be so
+available, or (2) arrange to deprive yourself of the benefit of the
+patent license for this particular work, or (3) arrange, in a manner
+consistent with the requirements of this License, to extend the patent
+license to downstream recipients.  &quot;Knowingly relying&quot; means you have
+actual knowledge that, but for the patent license, your conveying the
+covered work in a country, or your recipient's use of the covered work
+in a country, would infringe one or more identifiable patents in that
+country that you have reason to believe are valid.
+
+  If, pursuant to or in connection with a single transaction or
+arrangement, you convey, or propagate by procuring conveyance of, a
+covered work, and grant a patent license to some of the parties
+receiving the covered work authorizing them to use, propagate, modify
+or convey a specific copy of the covered work, then the patent license
+you grant is automatically extended to all recipients of the covered
+work and works based on it.
+
+  A patent license is &quot;discriminatory&quot; if it does not include within
+the scope of its coverage, prohibits the exercise of, or is
+conditioned on the non-exercise of one or more of the rights that are
+specifically granted under this License.  You may not convey a covered
+work if you are a party to an arrangement with a third party that is
+in the business of distributing software, under which you make payment
+to the third party based on the extent of your activity of conveying
+the work, and under which the third party grants, to any of the
+parties who would receive the covered work from you, a discriminatory
+patent license (a) in connection with copies of the covered work
+conveyed by you (or copies made from those copies), or (b) primarily
+for and in connection with specific products or compilations that
+contain the covered work, unless you entered into that arrangement,
+or that patent license was granted, prior to 28 March 2007.
+
+  Nothing in this License shall be construed as excluding or limiting
+any implied license or other defenses to infringement that may
+otherwise be available to you under applicable patent law.
+
+  12. No Surrender of Others' Freedom.
+
+  If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot convey a
+covered work so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you may
+not convey it at all.  For example, if you agree to terms that obligate you
+to collect a royalty for further conveying from those to whom you convey
+the Program, the only way you could satisfy both those terms and this
+License would be to refrain entirely from conveying the Program.
+
+  13. Use with the GNU Affero General Public License.
+
+  Notwithstanding any other provision of this License, you have
+permission to link or combine any covered work with a work licensed
+under version 3 of the GNU Affero General Public License into a single
+combined work, and to convey the resulting work.  The terms of this
+License will continue to apply to the part which is the covered work,
+but the special requirements of the GNU Affero General Public License,
+section 13, concerning interaction through a network will apply to the
+combination as such.
+
+  14. Revised Versions of this License.
+
+  The Free Software Foundation may publish revised and/or new versions of
+the GNU General Public License from time to time.  Such new versions will
+be similar in spirit to the present version, but may differ in detail to
+address new problems or concerns.
+
+  Each version is given a distinguishing version number.  If the
+Program specifies that a certain numbered version of the GNU General
+Public License &quot;or any later version&quot; applies to it, you have the
+option of following the terms and conditions either of that numbered
+version or of any later version published by the Free Software
+Foundation.  If the Program does not specify a version number of the
+GNU General Public License, you may choose any version ever published
+by the Free Software Foundation.
+
+  If the Program specifies that a proxy can decide which future
+versions of the GNU General Public License can be used, that proxy's
+public statement of acceptance of a version permanently authorizes you
+to choose that version for the Program.
+
+  Later license versions may give you additional or different
+permissions.  However, no additional obligations are imposed on any
+author or copyright holder as a result of your choosing to follow a
+later version.
+
+  15. Disclaimer of Warranty.
+
+  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM &quot;AS IS&quot; WITHOUT WARRANTY
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  16. Limitation of Liability.
+
+  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
+THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
+DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
+EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+  17. Interpretation of Sections 15 and 16.
+
+  If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+                     END OF TERMS AND CONDITIONS
+
+            How to Apply These Terms to Your New Programs
+
+  If you develop a new program, and you want it to be of the greatest
+possible use to the public, the best way to achieve this is to make it
+free software which everyone can redistribute and change under these terms.
+
+  To do so, attach the following notices to the program.  It is safest
+to attach them to the start of each source file to most effectively
+state the exclusion of warranty; and each file should have at least
+the &quot;copyright&quot; line and a pointer to where the full notice is found.
+
+    &lt;one line to give the program's name and a brief idea of what it does.&gt;
+    Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+Also add information on how to contact you by electronic and paper mail.
+
+  If the program does terminal interaction, make it output a short
+notice like this when it starts in an interactive mode:
+
+    &lt;program&gt;  Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+
+The hypothetical commands `show w' and `show c' should show the appropriate
+parts of the General Public License.  Of course, your program's commands
+might be different; for a GUI interface, you would use an &quot;about box&quot;.
+
+  You should also get your employer (if you work as a programmer) or school,
+if any, to sign a &quot;copyright disclaimer&quot; for the program, if necessary.
+For more information on this, and how to apply and follow the GNU GPL, see
+&lt;http://www.gnu.org/licenses/&gt;.
+
+  The GNU General Public License does not permit incorporating your program
+into proprietary programs.  If your program is a subroutine library, you
+may consider it more useful to permit linking proprietary applications with
+the library.  If this is what you want to do, use the GNU Lesser General
+Public License instead of this License.  But first, please read
+&lt;http://www.gnu.org/philosophy/why-not-lgpl.html&gt;.
+
+Name: libquadmath
+Files: numpy/.dylibs/libquadmath*.so
+Description: dynamically linked to files compiled with gcc
+Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libquadmath
+License: LGPL-2.1-or-later
+
+    GCC Quad-Precision Math Library
+    Copyright (C) 2010-2019 Free Software Foundation, Inc.
+    Written by Francois-Xavier Coudert  &lt;fxcoudert@gcc.gnu.org&gt;
+
+    This file is part of the libquadmath library.
+    Libquadmath is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Library General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    Libquadmath is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+    https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</text>
         </license>
       </licenses>
-      <purl>pkg:pypi/more-itertools@10.5.0</purl>
+      <purl>pkg:pypi/numpy@2.0.1</purl>
       <externalReferences>
-        <reference type="website">
-          <url>https://github.com/more-itertools/more-itertools</url>
-          <comment>from packaging metadata Project-URL: Homepage</comment>
+        <reference type="distribution">
+          <url>https://pypi.org/project/numpy/#files</url>
+          <comment>from packaging metadata Project-URL: Download</comment>
         </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="normality==2.5.0">
-      <name>normality</name>
-      <version>2.5.0</version>
-      <description>Micro-library to normalize text strings</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/normality@2.5.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>http://github.com/pudo/normality</url>
-          <comment>from packaging metadata Project-URL: Homepage</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="openpyxl==3.1.5">
-      <name>openpyxl</name>
-      <version>3.1.5</version>
-      <description>A Python library to read/write Excel 2010 xlsx/xlsm files</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/openpyxl@3.1.5</purl>
-      <externalReferences>
         <reference type="documentation">
-          <url>https://openpyxl.readthedocs.io/en/stable/</url>
+          <url>https://numpy.org/doc/</url>
           <comment>from packaging metadata Project-URL: Documentation</comment>
         </reference>
         <reference type="issue-tracker">
-          <url>https://foss.heptapod.net/openpyxl/openpyxl/-/issues</url>
+          <url>https://github.com/numpy/numpy/issues</url>
           <comment>from packaging metadata Project-URL: Tracker</comment>
         </reference>
         <reference type="other">
-          <url>https://foss.heptapod.net/openpyxl/openpyxl</url>
+          <url>https://github.com/numpy/numpy</url>
           <comment>from packaging metadata Project-URL: Source</comment>
         </reference>
+        <reference type="other">
+          <url>https://numpy.org/doc/stable/release</url>
+          <comment>from packaging metadata Project-URL: Release notes</comment>
+        </reference>
         <reference type="website">
-          <url>https://openpyxl.readthedocs.io</url>
+          <url>https://numpy.org</url>
+          <comment>from packaging metadata Project-URL: Homepage</comment>
+        </reference>
+        <reference type="website">
+          <url>https://numpy.org</url>
+          <comment>from packaging metadata: Home-page</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="oslili==0.15">
+      <name>oslili</name>
+      <version>0.15</version>
+      <description>Open Source License Identification Library</description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+        <license>
+          <name>License :: OSI Approved :: Apache Software License</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/oslili@0.15</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/oscarvalenzuelab/oslili</url>
           <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
@@ -1343,89 +1773,16 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="packvers==21.5">
-      <name>packvers</name>
-      <version>21.5</version>
-      <description>Core utilities for Python packages. Fork to support LegacyVersion</description>
-      <licenses>
-        <expression>BSD-2-Clause or Apache-2.0</expression>
-      </licenses>
-      <purl>pkg:pypi/packvers@21.5</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/packvers</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="parameter-expansion-patched==0.3.1">
-      <name>parameter-expansion-patched</name>
-      <version>0.3.1</version>
-      <description>Shell parameter expansion in Python. Patched by co-maintainer for a PyPI release.</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: Apache Software License</name>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/parameter-expansion-patched@0.3.1</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/parameter-expansion-patched</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="pdfminer.six==20240706">
-      <name>pdfminer.six</name>
-      <version>20240706</version>
-      <description>PDF parser and analyzer</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/pdfminer.six@20240706</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/pdfminer/pdfminer.six</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="pefile==2024.8.26">
-      <name>pefile</name>
-      <version>2024.8.26</version>
-      <description>Python PE parsing module</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/pefile@2024.8.26</purl>
-      <externalReferences>
-        <reference type="distribution">
-          <url>https://github.com/erocarrera/pefile/releases/download/v2024.8.26/pefile-2024.8.26.tar.gz</url>
-          <comment>from packaging metadata: Download-URL</comment>
-        </reference>
-        <reference type="website">
-          <url>https://github.com/erocarrera/pefile</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="pip==24.2">
+    <component type="library" bom-ref="pip==24.1.2">
       <name>pip</name>
-      <version>24.2</version>
+      <version>24.1.2</version>
       <description>The PyPA recommended tool for installing Python packages.</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/pip@24.2</purl>
+      <purl>pkg:pypi/pip@24.1.2</purl>
       <externalReferences>
         <reference type="documentation">
           <url>https://pip.pypa.io</url>
@@ -1441,6 +1798,31 @@
         </reference>
         <reference type="website">
           <url>https://pip.pypa.io/</url>
+          <comment>from packaging metadata Project-URL: Homepage</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pip-licenses==5.0.0">
+      <name>pip-licenses</name>
+      <version>5.0.0</version>
+      <description>Dump the software license list of Python packages installed with pip.</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/pip-licenses@5.0.0</purl>
+      <externalReferences>
+        <reference type="issue-tracker">
+          <url>https://github.com/raimon49/pip-licenses/issues</url>
+          <comment>from packaging metadata Project-URL: Issues</comment>
+        </reference>
+        <reference type="other">
+          <url>https://github.com/raimon49/pip-licenses/releases</url>
+          <comment>from packaging metadata Project-URL: Releases</comment>
+        </reference>
+        <reference type="website">
+          <url>https://github.com/raimon49/pip-licenses</url>
           <comment>from packaging metadata Project-URL: Homepage</comment>
         </reference>
       </externalReferences>
@@ -1462,87 +1844,32 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pkginfo2==30.0.0">
-      <name>pkginfo2</name>
-      <version>30.0.0</version>
-      <description>Query metadatdata from sdists / bdists / installed packages. Safer fork of pkginfo to avoid doing arbitrary imports and eval()</description>
+    <component type="library" bom-ref="prettytable==3.11.0">
+      <name>prettytable</name>
+      <version>3.11.0</version>
+      <description>A simple Python library for easily displaying tabular data in a visually appealing ASCII table format</description>
       <licenses>
         <license>
-          <id>MIT</id>
+          <name>License :: OSI Approved :: BSD License</name>
         </license>
-      </licenses>
-      <purl>pkg:pypi/pkginfo2@30.0.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/pkginfo2</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="pluggy==1.5.0">
-      <name>pluggy</name>
-      <version>1.5.0</version>
-      <description>plugin and hook calling mechanisms for python</description>
-      <licenses>
         <license>
-          <id>MIT</id>
+          <name>declared license of 'prettytable'</name>
+          <text content-type="text/plain">BSD (3 clause)</text>
         </license>
       </licenses>
-      <purl>pkg:pypi/pluggy@1.5.0</purl>
+      <purl>pkg:pypi/prettytable@3.11.0</purl>
       <externalReferences>
-        <reference type="website">
-          <url>https://github.com/pytest-dev/pluggy</url>
-          <comment>from packaging metadata: Home-page</comment>
+        <reference type="other">
+          <url>https://github.com/jazzband/prettytable</url>
+          <comment>from packaging metadata Project-URL: Source</comment>
         </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="plugincode==32.0.0">
-      <name>plugincode</name>
-      <version>32.0.0</version>
-      <description>plugincode is a library that provides plugin functionality for ScanCode toolkit.</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/plugincode@32.0.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/plugincode</url>
-          <comment>from packaging metadata: Home-page</comment>
+        <reference type="release-notes">
+          <url>https://github.com/jazzband/prettytable/releases</url>
+          <comment>from packaging metadata Project-URL: Changelog</comment>
         </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="ply==3.11">
-      <name>ply</name>
-      <version>3.11</version>
-      <description>Python Lex &amp; Yacc</description>
-      <licenses>
-        <license>
-          <name>declared license of 'ply'</name>
-          <text content-type="text/plain">BSD</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/ply@3.11</purl>
-      <externalReferences>
         <reference type="website">
-          <url>http://www.dabeaz.com/ply/</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="publicsuffix2==2.20191221">
-      <name>publicsuffix2</name>
-      <version>2.20191221</version>
-      <description>Get a public suffix for a domain name using the Public Suffix List. Forked from and using the same API as the publicsuffix package.</description>
-      <licenses>
-        <expression>MIT and MPL-2.0</expression>
-      </licenses>
-      <purl>pkg:pypi/publicsuffix2@2.20191221</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexb/python-publicsuffix2</url>
-          <comment>from packaging metadata: Home-page</comment>
+          <url>https://github.com/jazzband/prettytable</url>
+          <comment>from packaging metadata Project-URL: Homepage</comment>
         </reference>
       </externalReferences>
     </component>
@@ -1578,27 +1905,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pyahocorasick==2.1.0">
-      <name>pyahocorasick</name>
-      <version>2.1.0</version>
-      <description>pyahocorasick is a fast and memory efficient library for exact or approximate multi-pattern string search.  With the ``ahocorasick.Automaton`` class, you can find multiple key string occurrences at once in some input text.  You can use it as a plain dict-like Trie or convert a Trie to an automaton for efficient Aho-Corasick search. And pickle to disk for easy reuse of large automatons. Implemented in C and tested on Python 3.6+. Works on Linux, macOS and Windows. BSD-3-Cause license.</description>
-      <licenses>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-        <license>
-          <name>declared license of 'pyahocorasick'</name>
-          <text content-type="text/plain">BSD-3-Clause and Public-Domain</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/pyahocorasick@2.1.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>http://github.com/WojciechMula/pyahocorasick</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="pycparser==2.22">
       <name>pycparser</name>
       <version>2.22</version>
@@ -1619,41 +1925,6 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="pygmars==0.9.0">
-      <name>pygmars</name>
-      <version>0.9.0</version>
-      <description>Craft simple regex-based small language lexers and parsers. Build parsers from grammars and accept Pygments lexers as an input. Derived from NLTK.</description>
-      <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/pygmars@0.9.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/aboutcode-org/pygmars</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="pymaven-patch==0.3.2">
-      <name>pymaven-patch</name>
-      <version>0.3.2</version>
-      <description>Python access to maven. nexB advanced patch.</description>
-      <licenses>
-        <license>
-          <name>declared license of 'pymaven-patch'</name>
-          <text content-type="text/plain">Apache-2</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/pymaven-patch@0.3.2</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/nexB/pymaven</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
     <component type="library" bom-ref="pyparsing==3.1.4">
       <name>pyparsing</name>
       <version>3.1.4</version>
@@ -1668,6 +1939,23 @@
         <reference type="website">
           <url>https://github.com/pyparsing/pyparsing/</url>
           <comment>from packaging metadata Project-URL: Homepage</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="python-Levenshtein==0.25.1">
+      <name>python-Levenshtein</name>
+      <version>0.25.1</version>
+      <description>Python extension for computing string edit distances and similarities.</description>
+      <licenses>
+        <license>
+          <id>GPL-2.0-or-later</id>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/python-levenshtein@0.25.1</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/rapidfuzz/python-Levenshtein</url>
+          <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
     </component>
@@ -1703,30 +1991,36 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="rdflib==7.0.0">
-      <name>rdflib</name>
-      <version>7.0.0</version>
-      <description>RDFLib is a Python library for working with RDF, a simple yet powerful language for representing information.</description>
+    <component type="library" bom-ref="python-magic==0.4.27">
+      <name>python-magic</name>
+      <version>0.4.27</version>
+      <description>File type identification using libmagic</description>
       <licenses>
         <license>
-          <id>BSD-3-Clause</id>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: BSD License</name>
+          <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/rdflib@7.0.0</purl>
+      <purl>pkg:pypi/python-magic@0.4.27</purl>
       <externalReferences>
-        <reference type="documentation">
-          <url>https://rdflib.readthedocs.org/</url>
-          <comment>from packaging metadata Project-URL: Documentation</comment>
-        </reference>
-        <reference type="vcs">
-          <url>https://github.com/RDFLib/rdflib</url>
-          <comment>from packaging metadata Project-URL: Repository</comment>
-        </reference>
         <reference type="website">
-          <url>https://github.com/RDFLib/rdflib</url>
+          <url>http://github.com/ahupp/python-magic</url>
+          <comment>from packaging metadata: Home-page</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="rapidfuzz==3.9.7">
+      <name>rapidfuzz</name>
+      <version>3.9.7</version>
+      <description>rapid fuzzy string matching</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/rapidfuzz@3.9.7</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/rapidfuzz/RapidFuzz</url>
           <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
@@ -1799,9 +2093,6 @@
           <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
-      <properties>
-        <property name="cdx:python:package:required-extra">use-chardet-on-py3</property>
-      </properties>
     </component>
     <component type="library" bom-ref="rfc3339-validator==0.1.4">
       <name>rfc3339-validator</name>
@@ -1886,48 +2177,1026 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="saneyaml==0.6.1">
-      <name>saneyaml</name>
-      <version>0.6.1</version>
-      <description>Read and write readable YAML safely preserving order and avoiding bad surprises with unwanted infered type conversions. This library is a PyYaml wrapper with sane behaviour to read and write readable YAML safely, typically when used for configuration.</description>
+    <component type="library" bom-ref="scikit-learn==1.4.2">
+      <name>scikit-learn</name>
+      <version>1.4.2</version>
+      <description>A set of python modules for machine learning and data mining</description>
       <licenses>
         <license>
-          <id>Apache-2.0</id>
+          <name>License :: OSI Approved :: BSD License</name>
+        </license>
+        <license>
+          <name>declared license of 'scikit-learn'</name>
+          <text content-type="text/plain">new BSD</text>
         </license>
       </licenses>
-      <purl>pkg:pypi/saneyaml@0.6.1</purl>
+      <purl>pkg:pypi/scikit-learn@1.4.2</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://pypi.org/project/scikit-learn/#files</url>
+          <comment>from packaging metadata: Download-URL</comment>
+        </reference>
+        <reference type="documentation">
+          <url>https://scikit-learn.org/stable/documentation.html</url>
+          <comment>from packaging metadata Project-URL: Documentation</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/scikit-learn/scikit-learn/issues</url>
+          <comment>from packaging metadata Project-URL: Bug Tracker</comment>
+        </reference>
+        <reference type="other">
+          <url>https://github.com/scikit-learn/scikit-learn</url>
+          <comment>from packaging metadata Project-URL: Source Code</comment>
+        </reference>
         <reference type="website">
-          <url>https://github.com/aboutcode-org/saneyaml</url>
+          <url>https://scikit-learn.org</url>
           <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="scancode-toolkit==32.0.2">
-      <name>scancode-toolkit</name>
-      <version>32.0.2</version>
-      <description>ScanCode is a tool to scan code for license, copyright, package and their documented dependencies and other interesting facts. scancode-toolkit-mini is a special build that does not come with pre-built binary dependencies by default. These are instead installed separately or with the extra_requires scancode-toolkit-mini[full]</description>
+    <component type="library" bom-ref="scipy==1.14.0">
+      <name>scipy</name>
+      <version>1.14.0</version>
+      <description>Fundamental algorithms for scientific computing in Python</description>
       <licenses>
-        <expression>Apache-2.0 AND CC-BY-4.0 AND LicenseRef-scancode-other-permissive AND LicenseRef-scancode-other-copyleft</expression>
+        <license>
+          <name>License :: OSI Approved :: BSD License</name>
+        </license>
+        <license>
+          <name>declared license of 'scipy'</name>
+          <text content-type="text/plain">Copyright (c) 2001-2002 Enthought, Inc. 2003-2024, SciPy Developers.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above
+   copyright notice, this list of conditions and the following
+   disclaimer in the documentation and/or other materials provided
+   with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+&quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----
+
+This binary distribution of SciPy also bundles the following software:
+
+
+Name: OpenBLAS
+Files: scipy/.dylibs/libopenblas*.so
+Description: bundled as a dynamically linked library
+Availability: https://github.com/OpenMathLib/OpenBLAS/
+License: BSD-3-Clause-Attribution
+  Copyright (c) 2011-2014, The OpenBLAS Project
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+
+     1. Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+
+     2. Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in
+        the documentation and/or other materials provided with the
+        distribution.
+     3. Neither the name of the OpenBLAS project nor the names of
+        its contributors may be used to endorse or promote products
+        derived from this software without specific prior written
+        permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+  USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Name: LAPACK
+Files: scipy/.dylibs/libopenblas*.so
+Description: bundled in OpenBLAS
+Availability: https://github.com/OpenMathLib/OpenBLAS/
+License: BSD-3-Clause-Attribution
+  Copyright (c) 1992-2013 The University of Tennessee and The University
+                          of Tennessee Research Foundation.  All rights
+                          reserved.
+  Copyright (c) 2000-2013 The University of California Berkeley. All
+                          rights reserved.
+  Copyright (c) 2006-2013 The University of Colorado Denver.  All rights
+                          reserved.
+
+  $COPYRIGHT$
+
+  Additional copyrights may follow
+
+  $HEADER$
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are
+  met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer listed
+    in this license in the documentation and/or other materials
+    provided with the distribution.
+
+  - Neither the name of the copyright holders nor the names of its
+    contributors may be used to endorse or promote products derived from
+    this software without specific prior written permission.
+
+  The copyright holders provide no reassurances that the source code
+  provided does not infringe any patent, copyright, or any other
+  intellectual property rights of third parties.  The copyright holders
+  disclaim any liability to any recipient for claims brought against
+  recipient by any third party for infringement of that parties
+  intellectual property rights.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+Name: GCC runtime library
+Files: scipy/.dylibs/libgfortran*, scipy/.dylibs/libgcc*
+Description: dynamically linked to files compiled with gcc
+Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libgfortran
+License: GPL-3.0-with-GCC-exception
+  Copyright (C) 2002-2017 Free Software Foundation, Inc.
+
+  Libgfortran is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3, or (at your option)
+  any later version.
+
+  Libgfortran is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  Under Section 7 of GPL version 3, you are granted additional
+  permissions described in the GCC Runtime Library Exception, version
+  3.1, as published by the Free Software Foundation.
+
+  You should have received a copy of the GNU General Public License and
+  a copy of the GCC Runtime Library Exception along with this program;
+  see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+  &lt;http://www.gnu.org/licenses/&gt;.
+
+----
+
+Full text of license texts referred to above follows (that they are
+listed below does not necessarily imply the conditions apply to the
+present binary release):
+
+----
+
+GCC RUNTIME LIBRARY EXCEPTION
+
+Version 3.1, 31 March 2009
+
+Copyright (C) 2009 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+
+Everyone is permitted to copy and distribute verbatim copies of this
+license document, but changing it is not allowed.
+
+This GCC Runtime Library Exception (&quot;Exception&quot;) is an additional
+permission under section 7 of the GNU General Public License, version
+3 (&quot;GPLv3&quot;). It applies to a given file (the &quot;Runtime Library&quot;) that
+bears a notice placed by the copyright holder of the file stating that
+the file is governed by GPLv3 along with this Exception.
+
+When you use GCC to compile a program, GCC may combine portions of
+certain GCC header files and runtime libraries with the compiled
+program. The purpose of this Exception is to allow compilation of
+non-GPL (including proprietary) programs to use, in this way, the
+header files and runtime libraries covered by this Exception.
+
+0. Definitions.
+
+A file is an &quot;Independent Module&quot; if it either requires the Runtime
+Library for execution after a Compilation Process, or makes use of an
+interface provided by the Runtime Library, but is not otherwise based
+on the Runtime Library.
+
+&quot;GCC&quot; means a version of the GNU Compiler Collection, with or without
+modifications, governed by version 3 (or a specified later version) of
+the GNU General Public License (GPL) with the option of using any
+subsequent versions published by the FSF.
+
+&quot;GPL-compatible Software&quot; is software whose conditions of propagation,
+modification and use would permit combination with GCC in accord with
+the license of GCC.
+
+&quot;Target Code&quot; refers to output from any compiler for a real or virtual
+target processor architecture, in executable form or suitable for
+input to an assembler, loader, linker and/or execution
+phase. Notwithstanding that, Target Code does not include data in any
+format that is used as a compiler intermediate representation, or used
+for producing a compiler intermediate representation.
+
+The &quot;Compilation Process&quot; transforms code entirely represented in
+non-intermediate languages designed for human-written code, and/or in
+Java Virtual Machine byte code, into Target Code. Thus, for example,
+use of source code generators and preprocessors need not be considered
+part of the Compilation Process, since the Compilation Process can be
+understood as starting with the output of the generators or
+preprocessors.
+
+A Compilation Process is &quot;Eligible&quot; if it is done using GCC, alone or
+with other GPL-compatible software, or if it is done without using any
+work based on GCC. For example, using non-GPL-compatible Software to
+optimize any GCC intermediate representations would not qualify as an
+Eligible Compilation Process.
+
+1. Grant of Additional Permission.
+
+You have permission to propagate a work of Target Code formed by
+combining the Runtime Library with Independent Modules, even if such
+propagation would otherwise violate the terms of GPLv3, provided that
+all Target Code was generated by Eligible Compilation Processes. You
+may then convey such a combination under terms of your choice,
+consistent with the licensing of the Independent Modules.
+
+2. No Weakening of GCC Copyleft.
+
+The availability of this Exception does not imply any general
+presumption that third-party software is unaffected by the copyleft
+requirements of the license of GCC.
+
+----
+
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+                            Preamble
+
+  The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+  The licenses for most software and other practical works are designed
+to take away your freedom to share and change the works.  By contrast,
+the GNU General Public License is intended to guarantee your freedom to
+share and change all versions of a program--to make sure it remains free
+software for all its users.  We, the Free Software Foundation, use the
+GNU General Public License for most of our software; it applies also to
+any other work released this way by its authors.  You can apply it to
+your programs, too.
+
+  When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+them if you wish), that you receive source code or can get it if you
+want it, that you can change the software or use pieces of it in new
+free programs, and that you know you can do these things.
+
+  To protect your rights, we need to prevent others from denying you
+these rights or asking you to surrender the rights.  Therefore, you have
+certain responsibilities if you distribute copies of the software, or if
+you modify it: responsibilities to respect the freedom of others.
+
+  For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must pass on to the recipients the same
+freedoms that you received.  You must make sure that they, too, receive
+or can get the source code.  And you must show them these terms so they
+know their rights.
+
+  Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+giving you legal permission to copy, distribute and/or modify it.
+
+  For the developers' and authors' protection, the GPL clearly explains
+that there is no warranty for this free software.  For both users' and
+authors' sake, the GPL requires that modified versions be marked as
+changed, so that their problems will not be attributed erroneously to
+authors of previous versions.
+
+  Some devices are designed to deny users access to install or run
+modified versions of the software inside them, although the manufacturer
+can do so.  This is fundamentally incompatible with the aim of
+protecting users' freedom to change the software.  The systematic
+pattern of such abuse occurs in the area of products for individuals to
+use, which is precisely where it is most unacceptable.  Therefore, we
+have designed this version of the GPL to prohibit the practice for those
+products.  If such problems arise substantially in other domains, we
+stand ready to extend this provision to those domains in future versions
+of the GPL, as needed to protect the freedom of users.
+
+  Finally, every program is threatened constantly by software patents.
+States should not allow patents to restrict development and use of
+software on general-purpose computers, but in those that do, we wish to
+avoid the special danger that patents applied to a free program could
+make it effectively proprietary.  To prevent this, the GPL assures that
+patents cannot be used to render the program non-free.
+
+  The precise terms and conditions for copying, distribution and
+modification follow.
+
+                       TERMS AND CONDITIONS
+
+  0. Definitions.
+
+  &quot;This License&quot; refers to version 3 of the GNU General Public License.
+
+  &quot;Copyright&quot; also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+  &quot;The Program&quot; refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as &quot;you&quot;.  &quot;Licensees&quot; and
+&quot;recipients&quot; may be individuals or organizations.
+
+  To &quot;modify&quot; a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting work is called a &quot;modified version&quot; of the
+earlier work or a work &quot;based on&quot; the earlier work.
+
+  A &quot;covered work&quot; means either the unmodified Program or a work based
+on the Program.
+
+  To &quot;propagate&quot; a work means to do anything with it that, without
+permission, would make you directly or secondarily liable for
+infringement under applicable copyright law, except executing it on a
+computer or modifying a private copy.  Propagation includes copying,
+distribution (with or without modification), making available to the
+public, and in some countries other activities as well.
+
+  To &quot;convey&quot; a work means any kind of propagation that enables other
+parties to make or receive copies.  Mere interaction with a user through
+a computer network, with no transfer of a copy, is not conveying.
+
+  An interactive user interface displays &quot;Appropriate Legal Notices&quot;
+to the extent that it includes a convenient and prominently visible
+feature that (1) displays an appropriate copyright notice, and (2)
+tells the user that there is no warranty for the work (except to the
+extent that warranties are provided), that licensees may convey the
+work under this License, and how to view a copy of this License.  If
+the interface presents a list of user commands or options, such as a
+menu, a prominent item in the list meets this criterion.
+
+  1. Source Code.
+
+  The &quot;source code&quot; for a work means the preferred form of the work
+for making modifications to it.  &quot;Object code&quot; means any non-source
+form of a work.
+
+  A &quot;Standard Interface&quot; means an interface that either is an official
+standard defined by a recognized standards body, or, in the case of
+interfaces specified for a particular programming language, one that
+is widely used among developers working in that language.
+
+  The &quot;System Libraries&quot; of an executable work include anything, other
+than the work as a whole, that (a) is included in the normal form of
+packaging a Major Component, but which is not part of that Major
+Component, and (b) serves only to enable use of the work with that
+Major Component, or to implement a Standard Interface for which an
+implementation is available to the public in source code form.  A
+&quot;Major Component&quot;, in this context, means a major essential component
+(kernel, window system, and so on) of the specific operating system
+(if any) on which the executable work runs, or a compiler used to
+produce the work, or an object code interpreter used to run it.
+
+  The &quot;Corresponding Source&quot; for a work in object code form means all
+the source code needed to generate, install, and (for an executable
+work) run the object code and to modify the work, including scripts to
+control those activities.  However, it does not include the work's
+System Libraries, or general-purpose tools or generally available free
+programs which are used unmodified in performing those activities but
+which are not part of the work.  For example, Corresponding Source
+includes interface definition files associated with source files for
+the work, and the source code for shared libraries and dynamically
+linked subprograms that the work is specifically designed to require,
+such as by intimate data communication or control flow between those
+subprograms and other parts of the work.
+
+  The Corresponding Source need not include anything that users
+can regenerate automatically from other parts of the Corresponding
+Source.
+
+  The Corresponding Source for a work in source code form is that
+same work.
+
+  2. Basic Permissions.
+
+  All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the unmodified Program.  The output from running a
+covered work is covered by this License only if the output, given its
+content, constitutes a covered work.  This License acknowledges your
+rights of fair use or other equivalent, as provided by copyright law.
+
+  You may make, run and propagate covered works that you do not
+convey, without conditions so long as your license otherwise remains
+in force.  You may convey covered works to others for the sole purpose
+of having them make modifications exclusively for you, or provide you
+with facilities for running those works, provided that you comply with
+the terms of this License in conveying all material for which you do
+not control copyright.  Those thus making or running the covered works
+for you must do so exclusively on your behalf, under your direction
+and control, on terms that prohibit them from making any copies of
+your copyrighted material outside their relationship with you.
+
+  Conveying under any other circumstances is permitted solely under
+the conditions stated below.  Sublicensing is not allowed; section 10
+makes it unnecessary.
+
+  3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+  No covered work shall be deemed part of an effective technological
+measure under any applicable law fulfilling obligations under article
+11 of the WIPO copyright treaty adopted on 20 December 1996, or
+similar laws prohibiting or restricting circumvention of such
+measures.
+
+  When you convey a covered work, you waive any legal power to forbid
+circumvention of technological measures to the extent such circumvention
+is effected by exercising rights under this License with respect to
+the covered work, and you disclaim any intention to limit operation or
+modification of the work as a means of enforcing, against the work's
+users, your or third parties' legal rights to forbid circumvention of
+technological measures.
+
+  4. Conveying Verbatim Copies.
+
+  You may convey verbatim copies of the Program's source code as you
+receive it, in any medium, provided that you conspicuously and
+appropriately publish on each copy an appropriate copyright notice;
+keep intact all notices stating that this License and any
+non-permissive terms added in accord with section 7 apply to the code;
+keep intact all notices of the absence of any warranty; and give all
+recipients a copy of this License along with the Program.
+
+  You may charge any price or no price for each copy that you convey,
+and you may offer support or warranty protection for a fee.
+
+  5. Conveying Modified Source Versions.
+
+  You may convey a work based on the Program, or the modifications to
+produce it from the Program, in the form of source code under the
+terms of section 4, provided that you also meet all of these conditions:
+
+    a) The work must carry prominent notices stating that you modified
+    it, and giving a relevant date.
+
+    b) The work must carry prominent notices stating that it is
+    released under this License and any conditions added under section
+    7.  This requirement modifies the requirement in section 4 to
+    &quot;keep intact all notices&quot;.
+
+    c) You must license the entire work, as a whole, under this
+    License to anyone who comes into possession of a copy.  This
+    License will therefore apply, along with any applicable section 7
+    additional terms, to the whole of the work, and all its parts,
+    regardless of how they are packaged.  This License gives no
+    permission to license the work in any other way, but it does not
+    invalidate such permission if you have separately received it.
+
+    d) If the work has interactive user interfaces, each must display
+    Appropriate Legal Notices; however, if the Program has interactive
+    interfaces that do not display Appropriate Legal Notices, your
+    work need not make them do so.
+
+  A compilation of a covered work with other separate and independent
+works, which are not by their nature extensions of the covered work,
+and which are not combined with it such as to form a larger program,
+in or on a volume of a storage or distribution medium, is called an
+&quot;aggregate&quot; if the compilation and its resulting copyright are not
+used to limit the access or legal rights of the compilation's users
+beyond what the individual works permit.  Inclusion of a covered work
+in an aggregate does not cause this License to apply to the other
+parts of the aggregate.
+
+  6. Conveying Non-Source Forms.
+
+  You may convey a covered work in object code form under the terms
+of sections 4 and 5, provided that you also convey the
+machine-readable Corresponding Source under the terms of this License,
+in one of these ways:
+
+    a) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by the
+    Corresponding Source fixed on a durable physical medium
+    customarily used for software interchange.
+
+    b) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by a
+    written offer, valid for at least three years and valid for as
+    long as you offer spare parts or customer support for that product
+    model, to give anyone who possesses the object code either (1) a
+    copy of the Corresponding Source for all the software in the
+    product that is covered by this License, on a durable physical
+    medium customarily used for software interchange, for a price no
+    more than your reasonable cost of physically performing this
+    conveying of source, or (2) access to copy the
+    Corresponding Source from a network server at no charge.
+
+    c) Convey individual copies of the object code with a copy of the
+    written offer to provide the Corresponding Source.  This
+    alternative is allowed only occasionally and noncommercially, and
+    only if you received the object code with such an offer, in accord
+    with subsection 6b.
+
+    d) Convey the object code by offering access from a designated
+    place (gratis or for a charge), and offer equivalent access to the
+    Corresponding Source in the same way through the same place at no
+    further charge.  You need not require recipients to copy the
+    Corresponding Source along with the object code.  If the place to
+    copy the object code is a network server, the Corresponding Source
+    may be on a different server (operated by you or a third party)
+    that supports equivalent copying facilities, provided you maintain
+    clear directions next to the object code saying where to find the
+    Corresponding Source.  Regardless of what server hosts the
+    Corresponding Source, you remain obligated to ensure that it is
+    available for as long as needed to satisfy these requirements.
+
+    e) Convey the object code using peer-to-peer transmission, provided
+    you inform other peers where the object code and Corresponding
+    Source of the work are being offered to the general public at no
+    charge under subsection 6d.
+
+  A separable portion of the object code, whose source code is excluded
+from the Corresponding Source as a System Library, need not be
+included in conveying the object code work.
+
+  A &quot;User Product&quot; is either (1) a &quot;consumer product&quot;, which means any
+tangible personal property which is normally used for personal, family,
+or household purposes, or (2) anything designed or sold for incorporation
+into a dwelling.  In determining whether a product is a consumer product,
+doubtful cases shall be resolved in favor of coverage.  For a particular
+product received by a particular user, &quot;normally used&quot; refers to a
+typical or common use of that class of product, regardless of the status
+of the particular user or of the way in which the particular user
+actually uses, or expects or is expected to use, the product.  A product
+is a consumer product regardless of whether the product has substantial
+commercial, industrial or non-consumer uses, unless such uses represent
+the only significant mode of use of the product.
+
+  &quot;Installation Information&quot; for a User Product means any methods,
+procedures, authorization keys, or other information required to install
+and execute modified versions of a covered work in that User Product from
+a modified version of its Corresponding Source.  The information must
+suffice to ensure that the continued functioning of the modified object
+code is in no case prevented or interfered with solely because
+modification has been made.
+
+  If you convey an object code work under this section in, or with, or
+specifically for use in, a User Product, and the conveying occurs as
+part of a transaction in which the right of possession and use of the
+User Product is transferred to the recipient in perpetuity or for a
+fixed term (regardless of how the transaction is characterized), the
+Corresponding Source conveyed under this section must be accompanied
+by the Installation Information.  But this requirement does not apply
+if neither you nor any third party retains the ability to install
+modified object code on the User Product (for example, the work has
+been installed in ROM).
+
+  The requirement to provide Installation Information does not include a
+requirement to continue to provide support service, warranty, or updates
+for a work that has been modified or installed by the recipient, or for
+the User Product in which it has been modified or installed.  Access to a
+network may be denied when the modification itself materially and
+adversely affects the operation of the network or violates the rules and
+protocols for communication across the network.
+
+  Corresponding Source conveyed, and Installation Information provided,
+in accord with this section must be in a format that is publicly
+documented (and with an implementation available to the public in
+source code form), and must require no special password or key for
+unpacking, reading or copying.
+
+  7. Additional Terms.
+
+  &quot;Additional permissions&quot; are terms that supplement the terms of this
+License by making exceptions from one or more of its conditions.
+Additional permissions that are applicable to the entire Program shall
+be treated as though they were included in this License, to the extent
+that they are valid under applicable law.  If additional permissions
+apply only to part of the Program, that part may be used separately
+under those permissions, but the entire Program remains governed by
+this License without regard to the additional permissions.
+
+  When you convey a copy of a covered work, you may at your option
+remove any additional permissions from that copy, or from any part of
+it.  (Additional permissions may be written to require their own
+removal in certain cases when you modify the work.)  You may place
+additional permissions on material, added by you to a covered work,
+for which you have or can give appropriate copyright permission.
+
+  Notwithstanding any other provision of this License, for material you
+add to a covered work, you may (if authorized by the copyright holders of
+that material) supplement the terms of this License with terms:
+
+    a) Disclaiming warranty or limiting liability differently from the
+    terms of sections 15 and 16 of this License; or
+
+    b) Requiring preservation of specified reasonable legal notices or
+    author attributions in that material or in the Appropriate Legal
+    Notices displayed by works containing it; or
+
+    c) Prohibiting misrepresentation of the origin of that material, or
+    requiring that modified versions of such material be marked in
+    reasonable ways as different from the original version; or
+
+    d) Limiting the use for publicity purposes of names of licensors or
+    authors of the material; or
+
+    e) Declining to grant rights under trademark law for use of some
+    trade names, trademarks, or service marks; or
+
+    f) Requiring indemnification of licensors and authors of that
+    material by anyone who conveys the material (or modified versions of
+    it) with contractual assumptions of liability to the recipient, for
+    any liability that these contractual assumptions directly impose on
+    those licensors and authors.
+
+  All other non-permissive additional terms are considered &quot;further
+restrictions&quot; within the meaning of section 10.  If the Program as you
+received it, or any part of it, contains a notice stating that it is
+governed by this License along with a term that is a further
+restriction, you may remove that term.  If a license document contains
+a further restriction but permits relicensing or conveying under this
+License, you may add to a covered work material governed by the terms
+of that license document, provided that the further restriction does
+not survive such relicensing or conveying.
+
+  If you add terms to a covered work in accord with this section, you
+must place, in the relevant source files, a statement of the
+additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.
+
+  Additional terms, permissive or non-permissive, may be stated in the
+form of a separately written license, or stated as exceptions;
+the above requirements apply either way.
+
+  8. Termination.
+
+  You may not propagate or modify a covered work except as expressly
+provided under this License.  Any attempt otherwise to propagate or
+modify it is void, and will automatically terminate your rights under
+this License (including any patent licenses granted under the third
+paragraph of section 11).
+
+  However, if you cease all violation of this License, then your
+license from a particular copyright holder is reinstated (a)
+provisionally, unless and until the copyright holder explicitly and
+finally terminates your license, and (b) permanently, if the copyright
+holder fails to notify you of the violation by some reasonable means
+prior to 60 days after the cessation.
+
+  Moreover, your license from a particular copyright holder is
+reinstated permanently if the copyright holder notifies you of the
+violation by some reasonable means, this is the first time you have
+received notice of violation of this License (for any work) from that
+copyright holder, and you cure the violation prior to 30 days after
+your receipt of the notice.
+
+  Termination of your rights under this section does not terminate the
+licenses of parties who have received copies or rights from you under
+this License.  If your rights have been terminated and not permanently
+reinstated, you do not qualify to receive new licenses for the same
+material under section 10.
+
+  9. Acceptance Not Required for Having Copies.
+
+  You are not required to accept this License in order to receive or
+run a copy of the Program.  Ancillary propagation of a covered work
+occurring solely as a consequence of using peer-to-peer transmission
+to receive a copy likewise does not require acceptance.  However,
+nothing other than this License grants you permission to propagate or
+modify any covered work.  These actions infringe copyright if you do
+not accept this License.  Therefore, by modifying or propagating a
+covered work, you indicate your acceptance of this License to do so.
+
+  10. Automatic Licensing of Downstream Recipients.
+
+  Each time you convey a covered work, the recipient automatically
+receives a license from the original licensors, to run, modify and
+propagate that work, subject to this License.  You are not responsible
+for enforcing compliance by third parties with this License.
+
+  An &quot;entity transaction&quot; is a transaction transferring control of an
+organization, or substantially all assets of one, or subdividing an
+organization, or merging organizations.  If propagation of a covered
+work results from an entity transaction, each party to that
+transaction who receives a copy of the work also receives whatever
+licenses to the work the party's predecessor in interest had or could
+give under the previous paragraph, plus a right to possession of the
+Corresponding Source of the work from the predecessor in interest, if
+the predecessor has it or can get it with reasonable efforts.
+
+  You may not impose any further restrictions on the exercise of the
+rights granted or affirmed under this License.  For example, you may
+not impose a license fee, royalty, or other charge for exercise of
+rights granted under this License, and you may not initiate litigation
+(including a cross-claim or counterclaim in a lawsuit) alleging that
+any patent claim is infringed by making, using, selling, offering for
+sale, or importing the Program or any portion of it.
+
+  11. Patents.
+
+  A &quot;contributor&quot; is a copyright holder who authorizes use under this
+License of the Program or a work on which the Program is based.  The
+work thus licensed is called the contributor's &quot;contributor version&quot;.
+
+  A contributor's &quot;essential patent claims&quot; are all patent claims
+owned or controlled by the contributor, whether already acquired or
+hereafter acquired, that would be infringed by some manner, permitted
+by this License, of making, using, or selling its contributor version,
+but do not include claims that would be infringed only as a
+consequence of further modification of the contributor version.  For
+purposes of this definition, &quot;control&quot; includes the right to grant
+patent sublicenses in a manner consistent with the requirements of
+this License.
+
+  Each contributor grants you a non-exclusive, worldwide, royalty-free
+patent license under the contributor's essential patent claims, to
+make, use, sell, offer for sale, import and otherwise run, modify and
+propagate the contents of its contributor version.
+
+  In the following three paragraphs, a &quot;patent license&quot; is any express
+agreement or commitment, however denominated, not to enforce a patent
+(such as an express permission to practice a patent or covenant not to
+sue for patent infringement).  To &quot;grant&quot; such a patent license to a
+party means to make such an agreement or commitment not to enforce a
+patent against the party.
+
+  If you convey a covered work, knowingly relying on a patent license,
+and the Corresponding Source of the work is not available for anyone
+to copy, free of charge and under the terms of this License, through a
+publicly available network server or other readily accessible means,
+then you must either (1) cause the Corresponding Source to be so
+available, or (2) arrange to deprive yourself of the benefit of the
+patent license for this particular work, or (3) arrange, in a manner
+consistent with the requirements of this License, to extend the patent
+license to downstream recipients.  &quot;Knowingly relying&quot; means you have
+actual knowledge that, but for the patent license, your conveying the
+covered work in a country, or your recipient's use of the covered work
+in a country, would infringe one or more identifiable patents in that
+country that you have reason to believe are valid.
+
+  If, pursuant to or in connection with a single transaction or
+arrangement, you convey, or propagate by procuring conveyance of, a
+covered work, and grant a patent license to some of the parties
+receiving the covered work authorizing them to use, propagate, modify
+or convey a specific copy of the covered work, then the patent license
+you grant is automatically extended to all recipients of the covered
+work and works based on it.
+
+  A patent license is &quot;discriminatory&quot; if it does not include within
+the scope of its coverage, prohibits the exercise of, or is
+conditioned on the non-exercise of one or more of the rights that are
+specifically granted under this License.  You may not convey a covered
+work if you are a party to an arrangement with a third party that is
+in the business of distributing software, under which you make payment
+to the third party based on the extent of your activity of conveying
+the work, and under which the third party grants, to any of the
+parties who would receive the covered work from you, a discriminatory
+patent license (a) in connection with copies of the covered work
+conveyed by you (or copies made from those copies), or (b) primarily
+for and in connection with specific products or compilations that
+contain the covered work, unless you entered into that arrangement,
+or that patent license was granted, prior to 28 March 2007.
+
+  Nothing in this License shall be construed as excluding or limiting
+any implied license or other defenses to infringement that may
+otherwise be available to you under applicable patent law.
+
+  12. No Surrender of Others' Freedom.
+
+  If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot convey a
+covered work so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you may
+not convey it at all.  For example, if you agree to terms that obligate you
+to collect a royalty for further conveying from those to whom you convey
+the Program, the only way you could satisfy both those terms and this
+License would be to refrain entirely from conveying the Program.
+
+  13. Use with the GNU Affero General Public License.
+
+  Notwithstanding any other provision of this License, you have
+permission to link or combine any covered work with a work licensed
+under version 3 of the GNU Affero General Public License into a single
+combined work, and to convey the resulting work.  The terms of this
+License will continue to apply to the part which is the covered work,
+but the special requirements of the GNU Affero General Public License,
+section 13, concerning interaction through a network will apply to the
+combination as such.
+
+  14. Revised Versions of this License.
+
+  The Free Software Foundation may publish revised and/or new versions of
+the GNU General Public License from time to time.  Such new versions will
+be similar in spirit to the present version, but may differ in detail to
+address new problems or concerns.
+
+  Each version is given a distinguishing version number.  If the
+Program specifies that a certain numbered version of the GNU General
+Public License &quot;or any later version&quot; applies to it, you have the
+option of following the terms and conditions either of that numbered
+version or of any later version published by the Free Software
+Foundation.  If the Program does not specify a version number of the
+GNU General Public License, you may choose any version ever published
+by the Free Software Foundation.
+
+  If the Program specifies that a proxy can decide which future
+versions of the GNU General Public License can be used, that proxy's
+public statement of acceptance of a version permanently authorizes you
+to choose that version for the Program.
+
+  Later license versions may give you additional or different
+permissions.  However, no additional obligations are imposed on any
+author or copyright holder as a result of your choosing to follow a
+later version.
+
+  15. Disclaimer of Warranty.
+
+  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM &quot;AS IS&quot; WITHOUT WARRANTY
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  16. Limitation of Liability.
+
+  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
+THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
+DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
+EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+  17. Interpretation of Sections 15 and 16.
+
+  If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+                     END OF TERMS AND CONDITIONS
+
+            How to Apply These Terms to Your New Programs
+
+  If you develop a new program, and you want it to be of the greatest
+possible use to the public, the best way to achieve this is to make it
+free software which everyone can redistribute and change under these terms.
+
+  To do so, attach the following notices to the program.  It is safest
+to attach them to the start of each source file to most effectively
+state the exclusion of warranty; and each file should have at least
+the &quot;copyright&quot; line and a pointer to where the full notice is found.
+
+    &lt;one line to give the program's name and a brief idea of what it does.&gt;
+    Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+Also add information on how to contact you by electronic and paper mail.
+
+  If the program does terminal interaction, make it output a short
+notice like this when it starts in an interactive mode:
+
+    &lt;program&gt;  Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+
+The hypothetical commands `show w' and `show c' should show the appropriate
+parts of the General Public License.  Of course, your program's commands
+might be different; for a GUI interface, you would use an &quot;about box&quot;.
+
+  You should also get your employer (if you work as a programmer) or school,
+if any, to sign a &quot;copyright disclaimer&quot; for the program, if necessary.
+For more information on this, and how to apply and follow the GNU GPL, see
+&lt;http://www.gnu.org/licenses/&gt;.
+
+  The GNU General Public License does not permit incorporating your program
+into proprietary programs.  If your program is a subroutine library, you
+may consider it more useful to permit linking proprietary applications with
+the library.  If this is what you want to do, use the GNU Lesser General
+Public License instead of this License.  But first, please read
+&lt;http://www.gnu.org/philosophy/why-not-lgpl.html&gt;.
+
+
+Name: libquadmath
+Files: scipy/.dylibs/libquadmath*.so
+Description: dynamically linked to files compiled with gcc
+Availability: https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=libquadmath
+License: LGPL-2.1-or-later
+
+    GCC Quad-Precision Math Library
+    Copyright (C) 2010-2019 Free Software Foundation, Inc.
+    Written by Francois-Xavier Coudert  &lt;fxcoudert@gcc.gnu.org&gt;
+
+    This file is part of the libquadmath library.
+    Libquadmath is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Library General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    Libquadmath is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+    https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</text>
+        </license>
       </licenses>
-      <purl>pkg:pypi/scancode-toolkit@32.0.2</purl>
+      <purl>pkg:pypi/scipy@1.14.0</purl>
       <externalReferences>
+        <reference type="distribution">
+          <url>https://github.com/scipy/scipy/releases</url>
+          <comment>from packaging metadata Project-URL: Download</comment>
+        </reference>
+        <reference type="documentation">
+          <url>https://docs.scipy.org/doc/scipy/</url>
+          <comment>from packaging metadata Project-URL: Documentation</comment>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/scipy/scipy/issues</url>
+          <comment>from packaging metadata Project-URL: Tracker</comment>
+        </reference>
+        <reference type="other">
+          <url>https://github.com/scipy/scipy</url>
+          <comment>from packaging metadata Project-URL: Source</comment>
+        </reference>
         <reference type="website">
-          <url>https://github.com/nexB/scancode-toolkit</url>
+          <url>https://scipy.org/</url>
+          <comment>from packaging metadata Project-URL: Homepage</comment>
+        </reference>
+        <reference type="website">
+          <url>https://scipy.org/</url>
           <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="setuptools==75.1.0">
+    <component type="library" bom-ref="setuptools==71.1.0">
       <name>setuptools</name>
-      <version>75.1.0</version>
+      <version>71.1.0</version>
       <description>Easily download, build, install, upgrade, and uninstall Python packages</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/setuptools@75.1.0</purl>
+      <purl>pkg:pypi/setuptools@71.1.0</purl>
       <externalReferences>
         <reference type="documentation">
           <url>https://setuptools.pypa.io/</url>
@@ -1981,16 +3250,16 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="soupsieve==2.6">
+    <component type="library" bom-ref="soupsieve==2.5">
       <name>soupsieve</name>
-      <version>2.6</version>
+      <version>2.5</version>
       <description>A modern CSS selector implementation for Beautiful Soup.</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/soupsieve@2.6</purl>
+      <purl>pkg:pypi/soupsieve@2.5</purl>
       <externalReferences>
         <reference type="website">
           <url>https://github.com/facelessuser/soupsieve</url>
@@ -1998,89 +3267,94 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="spdx-tools==0.7.0rc0">
-      <name>spdx-tools</name>
-      <version>0.7.0rc0</version>
-      <description>SPDX parser and tools.</description>
+    <component type="library" bom-ref="ssdeep==3.4">
+      <name>ssdeep</name>
+      <version>3.4</version>
+      <description>Python wrapper for the ssdeep library</description>
       <licenses>
         <license>
-          <id>Apache-2.0</id>
+          <id>LGPL-3.0-or-later</id>
         </license>
         <license>
-          <name>License :: OSI Approved :: Apache Software License</name>
+          <name>declared license of 'ssdeep'</name>
+          <text content-type="text/plain">LGPLv3+</text>
         </license>
       </licenses>
-      <purl>pkg:pypi/spdx-tools@0.7.0rc0</purl>
+      <purl>pkg:pypi/ssdeep@3.4</purl>
       <externalReferences>
         <reference type="website">
-          <url>https://github.com/spdx/tools-python</url>
-          <comment>from packaging metadata Project-URL: Homepage</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="text-unidecode==1.3">
-      <name>text-unidecode</name>
-      <version>1.3</version>
-      <description>The most basic Text::Unidecode port</description>
-      <licenses>
-        <license>
-          <id>GPL-2.0-or-later</id>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: Artistic License</name>
-        </license>
-        <license>
-          <name>License :: OSI Approved :: GNU General Public License (GPL)</name>
-        </license>
-        <license>
-          <name>declared license of 'text-unidecode'</name>
-          <text content-type="text/plain">Artistic License</text>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/text-unidecode@1.3</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/kmike/text-unidecode/</url>
+          <url>http://github.com/DinoTools/python-ssdeep</url>
           <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="toml==0.10.2">
-      <name>toml</name>
-      <version>0.10.2</version>
-      <description>Python Library for Tom's Obvious, Minimal Language</description>
+    <component type="library" bom-ref="threadpoolctl==3.5.0">
+      <name>threadpoolctl</name>
+      <version>3.5.0</version>
+      <description>threadpoolctl</description>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+        <license>
+          <name>License :: OSI Approved :: BSD License</name>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/threadpoolctl@3.5.0</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/joblib/threadpoolctl</url>
+          <comment>from packaging metadata: Home-page</comment>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="tomli==2.0.2">
+      <name>tomli</name>
+      <version>2.0.2</version>
+      <description>A lil' TOML parser</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/toml@0.10.2</purl>
+      <purl>pkg:pypi/tomli@2.0.2</purl>
       <externalReferences>
+        <reference type="release-notes">
+          <url>https://github.com/hukkin/tomli/blob/master/CHANGELOG.md</url>
+          <comment>from packaging metadata Project-URL: Changelog</comment>
+        </reference>
         <reference type="website">
-          <url>https://github.com/uiri/toml</url>
-          <comment>from packaging metadata: Home-page</comment>
+          <url>https://github.com/hukkin/tomli</url>
+          <comment>from packaging metadata Project-URL: Homepage</comment>
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="typecode==30.0.2">
-      <name>typecode</name>
-      <version>30.0.2</version>
-      <description>Comprehensive filetype and mimetype detection using libmagic and Pygments.</description>
+    <component type="library" bom-ref="tqdm==4.66.4">
+      <name>tqdm</name>
+      <version>4.66.4</version>
+      <description>Fast, Extensible Progress Meter</description>
       <licenses>
-        <license>
-          <id>Apache-2.0</id>
-        </license>
+        <expression>MPL-2.0 AND MIT</expression>
       </licenses>
-      <purl>pkg:pypi/typecode@30.0.2</purl>
+      <purl>pkg:pypi/tqdm@4.66.4</purl>
       <externalReferences>
+        <reference type="other">
+          <url>https://github.com/tqdm/tqdm/wiki</url>
+          <comment>from packaging metadata Project-URL: wiki</comment>
+        </reference>
+        <reference type="release-notes">
+          <url>https://tqdm.github.io/releases</url>
+          <comment>from packaging metadata Project-URL: changelog</comment>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/tqdm/tqdm</url>
+          <comment>from packaging metadata Project-URL: repository</comment>
+        </reference>
         <reference type="website">
-          <url>https://github.com/nexB/typecode</url>
-          <comment>from packaging metadata: Home-page</comment>
+          <url>https://tqdm.github.io</url>
+          <comment>from packaging metadata Project-URL: homepage</comment>
         </reference>
       </externalReferences>
-      <properties>
-        <property name="cdx:python:package:required-extra">full</property>
-      </properties>
     </component>
     <component type="library" bom-ref="types-python-dateutil==2.9.0.20241003">
       <name>types-python-dateutil</name>
@@ -2139,16 +3413,16 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="urllib3==2.2.3">
+    <component type="library" bom-ref="urllib3==2.2.2">
       <name>urllib3</name>
-      <version>2.2.3</version>
+      <version>2.2.2</version>
       <description>HTTP library with thread-safe connection pooling, file post, and more.</description>
       <licenses>
         <license>
           <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/urllib3@2.2.3</purl>
+      <purl>pkg:pypi/urllib3@2.2.2</purl>
       <externalReferences>
         <reference type="documentation">
           <url>https://urllib3.readthedocs.io</url>
@@ -2165,23 +3439,6 @@
         <reference type="release-notes">
           <url>https://github.com/urllib3/urllib3/blob/main/CHANGES.rst</url>
           <comment>from packaging metadata Project-URL: Changelog</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="urlpy==0.5">
-      <name>urlpy</name>
-      <version>0.5</version>
-      <description>Simple URL parsing, canonicalization and equivalence.</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/urlpy@0.5</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>http://github.com/nexB/urlpy</url>
-          <comment>from packaging metadata: Home-page</comment>
         </reference>
       </externalReferences>
     </component>
@@ -2226,169 +3483,71 @@
         </reference>
       </externalReferences>
     </component>
-    <component type="library" bom-ref="webencodings==0.5.1">
-      <name>webencodings</name>
-      <version>0.5.1</version>
-      <description>Character encoding aliases for legacy web content</description>
+    <component type="library" bom-ref="xmonkey-lidy==1.0.12">
+      <name>xmonkey-lidy</name>
+      <version>1.0.12</version>
+      <description>A XMonkey tool for identifying SPDX licenses.</description>
       <licenses>
         <license>
-          <name>License :: OSI Approved :: BSD License</name>
-        </license>
-        <license>
-          <name>declared license of 'webencodings'</name>
-          <text content-type="text/plain">BSD</text>
+          <id>MIT</id>
         </license>
       </licenses>
-      <purl>pkg:pypi/webencodings@0.5.1</purl>
+      <purl>pkg:pypi/xmonkey-lidy@1.0.12</purl>
+    </component>
+    <component type="library" bom-ref="xmonkey_namonica==0.1.35">
+      <name>xmonkey_namonica</name>
+      <version>0.1.35</version>
+      <description>Purl2Notices - OSS Attribution Generator</description>
+      <licenses>
+        <license>
+          <name>License :: OSI Approved :: Apache Software License</name>
+        </license>
+        <license>
+          <name>declared license of 'xmonkey_namonica'</name>
+          <text content-type="text/plain">Apache 2.0</text>
+        </license>
+      </licenses>
+      <purl>pkg:pypi/xmonkey-namonica@0.1.35</purl>
       <externalReferences>
         <reference type="website">
-          <url>https://github.com/SimonSapin/python-webencodings</url>
+          <url>https://github.com/Xpertians/xmonkey-namonica</url>
           <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="wheel==0.44.0">
-      <name>wheel</name>
-      <version>0.44.0</version>
-      <description>A built-package format for Python</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/wheel@0.44.0</purl>
-      <externalReferences>
-        <reference type="documentation">
-          <url>https://wheel.readthedocs.io/</url>
-          <comment>from packaging metadata Project-URL: Documentation</comment>
-        </reference>
-        <reference type="issue-tracker">
-          <url>https://github.com/pypa/wheel/issues</url>
-          <comment>from packaging metadata Project-URL: Issue Tracker</comment>
-        </reference>
-        <reference type="other">
-          <url>https://github.com/pypa/wheel</url>
-          <comment>from packaging metadata Project-URL: Source</comment>
-        </reference>
-        <reference type="release-notes">
-          <url>https://wheel.readthedocs.io/en/stable/news.html</url>
-          <comment>from packaging metadata Project-URL: Changelog</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="xmltodict==0.13.0">
-      <name>xmltodict</name>
-      <version>0.13.0</version>
-      <description>Makes working with XML feel like you are working with JSON</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/xmltodict@0.13.0</purl>
-      <externalReferences>
-        <reference type="website">
-          <url>https://github.com/martinblech/xmltodict</url>
-          <comment>from packaging metadata: Home-page</comment>
-        </reference>
-      </externalReferences>
-    </component>
-    <component type="library" bom-ref="zipp==3.20.2">
-      <name>zipp</name>
-      <version>3.20.2</version>
-      <description>Backport of pathlib-compatible object wrapper for zip files</description>
-      <licenses>
-        <license>
-          <id>MIT</id>
-        </license>
-      </licenses>
-      <purl>pkg:pypi/zipp@3.20.2</purl>
-      <externalReferences>
-        <reference type="other">
-          <url>https://github.com/jaraco/zipp</url>
-          <comment>from packaging metadata Project-URL: Source</comment>
         </reference>
       </externalReferences>
     </component>
   </components>
   <dependencies>
-    <dependency ref="Jinja2==2.11.3">
-      <dependency ref="MarkupSafe==2.0.1"/>
-    </dependency>
-    <dependency ref="MarkupSafe==2.0.1"/>
-    <dependency ref="PyYAML==3.13"/>
-    <dependency ref="Pygments==2.18.0">
-      <dependency ref="colorama==0.4.6"/>
+    <dependency ref="Levenshtein==0.25.1">
+      <dependency ref="rapidfuzz==3.9.7"/>
     </dependency>
     <dependency ref="arrow==1.3.0">
       <dependency ref="python-dateutil==2.9.0.post0"/>
       <dependency ref="types-python-dateutil==2.9.0.20241003"/>
     </dependency>
-    <dependency ref="attributecode==2.0.1">
-      <dependency ref="Jinja2==2.11.3"/>
-      <dependency ref="PyYAML==3.13"/>
-      <dependency ref="boolean.py==4.0"/>
-      <dependency ref="click==8.1.7"/>
-      <dependency ref="colorama==0.4.6"/>
-      <dependency ref="license-expression==30.3.1"/>
-      <dependency ref="packageurl-python==0.15.6"/>
-      <dependency ref="saneyaml==0.6.1"/>
-    </dependency>
-    <dependency ref="attrs==24.2.0">
-      <dependency ref="importlib_metadata==8.5.0"/>
-    </dependency>
-    <dependency ref="banal==1.0.6">
-      <dependency ref="wheel==0.44.0"/>
-    </dependency>
+    <dependency ref="attrs==24.2.0"/>
     <dependency ref="beautifulsoup4==4.12.3">
       <dependency ref="chardet==5.2.0"/>
       <dependency ref="charset-normalizer==3.3.2"/>
-      <dependency ref="html5lib==1.1"/>
       <dependency ref="lxml==5.3.0"/>
-      <dependency ref="soupsieve==2.6"/>
-    </dependency>
-    <dependency ref="binaryornot==0.4.4">
-      <dependency ref="chardet==5.2.0"/>
+      <dependency ref="soupsieve==2.5"/>
     </dependency>
     <dependency ref="boolean.py==4.0"/>
-    <dependency ref="certifi==2024.8.30"/>
-    <dependency ref="cffi==1.17.1">
+    <dependency ref="certifi==2024.7.4"/>
+    <dependency ref="cffi==1.16.0">
       <dependency ref="pycparser==2.22"/>
     </dependency>
     <dependency ref="chardet==5.2.0"/>
     <dependency ref="charset-normalizer==3.3.2"/>
-    <dependency ref="click==8.1.7">
-      <dependency ref="colorama==0.4.6"/>
-      <dependency ref="importlib_metadata==8.5.0"/>
-    </dependency>
-    <dependency ref="colorama==0.4.6"/>
-    <dependency ref="commoncode==32.0.0">
-      <dependency ref="attrs==24.2.0"/>
-      <dependency ref="beautifulsoup4==4.12.3"/>
-      <dependency ref="click==8.1.7"/>
-      <dependency ref="requests==2.32.3"/>
-      <dependency ref="saneyaml==0.6.1"/>
-      <dependency ref="text-unidecode==1.3"/>
-    </dependency>
-    <dependency ref="container-inspector==33.0.0">
-      <dependency ref="attrs==24.2.0"/>
-      <dependency ref="click==8.1.7"/>
-      <dependency ref="commoncode==32.0.0"/>
-      <dependency ref="dockerfile-parse==2.0.1"/>
-    </dependency>
-    <dependency ref="cryptography==43.0.1">
-      <dependency ref="certifi==2024.8.30"/>
-      <dependency ref="cffi==1.17.1"/>
-      <dependency ref="click==8.1.7"/>
-    </dependency>
+    <dependency ref="click==8.1.7"/>
     <dependency ref="cyclonedx-bom==4.6.1">
       <dependency ref="chardet==5.2.0"/>
-      <dependency ref="cyclonedx-python-lib==7.6.1"/>
+      <dependency ref="cyclonedx-python-lib==7.6.2"/>
       <dependency ref="packageurl-python==0.15.6"/>
       <dependency ref="packaging==24.1"/>
       <dependency ref="pip-requirements-parser==32.0.1"/>
+      <dependency ref="tomli==2.0.2"/>
     </dependency>
-    <dependency ref="cyclonedx-python-lib==7.6.1">
+    <dependency ref="cyclonedx-python-lib==7.6.2">
       <dependency ref="jsonschema==4.23.0"/>
       <dependency ref="license-expression==30.3.1"/>
       <dependency ref="lxml==5.3.0"/>
@@ -2396,51 +3555,13 @@
       <dependency ref="py-serializable==1.1.2"/>
       <dependency ref="sortedcontainers==2.4.0"/>
     </dependency>
-    <dependency ref="debian_inspector==31.1.0">
-      <dependency ref="attrs==24.2.0"/>
-      <dependency ref="chardet==5.2.0"/>
-      <dependency ref="commoncode==32.0.0"/>
-    </dependency>
     <dependency ref="defusedxml==0.7.1"/>
-    <dependency ref="dockerfile-parse==2.0.1"/>
-    <dependency ref="dparse2==0.7.0">
-      <dependency ref="PyYAML==3.13"/>
-      <dependency ref="packvers==21.5"/>
-      <dependency ref="toml==0.10.2"/>
-    </dependency>
-    <dependency ref="et-xmlfile==1.1.0"/>
-    <dependency ref="fasteners==0.19"/>
-    <dependency ref="fingerprints==1.2.3">
-      <dependency ref="PyYAML==3.13"/>
-      <dependency ref="normality==2.5.0"/>
-    </dependency>
     <dependency ref="fqdn==1.5.1"/>
-    <dependency ref="ftfy==6.2.3">
-      <dependency ref="wcwidth==0.2.13"/>
-    </dependency>
-    <dependency ref="gemfileparser2==0.9.4"/>
-    <dependency ref="html5lib==1.1">
-      <dependency ref="chardet==5.2.0"/>
-      <dependency ref="lxml==5.3.0"/>
-      <dependency ref="six==1.16.0"/>
-      <dependency ref="webencodings==0.5.1"/>
-    </dependency>
-    <dependency ref="idna==3.10"/>
-    <dependency ref="importlib_metadata==8.5.0">
-      <dependency ref="packaging==24.1"/>
-      <dependency ref="zipp==3.20.2"/>
-    </dependency>
-    <dependency ref="intbitset==3.1.0"/>
-    <dependency ref="isodate==0.6.1">
-      <dependency ref="six==1.16.0"/>
-    </dependency>
+    <dependency ref="idna==3.7"/>
     <dependency ref="isoduration==20.11.0">
       <dependency ref="arrow==1.3.0"/>
     </dependency>
-    <dependency ref="jaraco.functools==4.1.0">
-      <dependency ref="more-itertools==10.5.0"/>
-    </dependency>
-    <dependency ref="javaproperties==0.8.1"/>
+    <dependency ref="joblib==1.4.2"/>
     <dependency ref="jsonpointer==3.0.0"/>
     <dependency ref="jsonschema-specifications==2023.12.1">
       <dependency ref="referencing==0.35.1"/>
@@ -2448,7 +3569,7 @@
     <dependency ref="jsonschema==4.23.0">
       <dependency ref="attrs==24.2.0"/>
       <dependency ref="fqdn==1.5.1"/>
-      <dependency ref="idna==3.10"/>
+      <dependency ref="idna==3.7"/>
       <dependency ref="isoduration==20.11.0"/>
       <dependency ref="jsonpointer==3.0.0"/>
       <dependency ref="jsonschema-specifications==2023.12.1"/>
@@ -2459,192 +3580,110 @@
       <dependency ref="uri-template==1.3.0"/>
       <dependency ref="webcolors==24.8.0"/>
     </dependency>
-    <dependency ref="jsonstreams==0.6.0">
-      <dependency ref="six==1.16.0"/>
-    </dependency>
     <dependency ref="license-expression==30.3.1">
       <dependency ref="boolean.py==4.0"/>
     </dependency>
     <dependency ref="lxml==5.3.0">
       <dependency ref="beautifulsoup4==4.12.3"/>
-      <dependency ref="html5lib==1.1"/>
     </dependency>
-    <dependency ref="more-itertools==10.5.0"/>
-    <dependency ref="normality==2.5.0">
-      <dependency ref="banal==1.0.6"/>
-      <dependency ref="chardet==5.2.0"/>
-      <dependency ref="charset-normalizer==3.3.2"/>
-      <dependency ref="text-unidecode==1.3"/>
-    </dependency>
-    <dependency ref="openpyxl==3.1.5">
-      <dependency ref="et-xmlfile==1.1.0"/>
+    <dependency ref="numpy==2.0.1"/>
+    <dependency ref="oslili==0.15">
+      <dependency ref="scikit-learn==1.4.2"/>
+      <dependency ref="ssdeep==3.4"/>
     </dependency>
     <dependency ref="packageurl-python==0.15.6">
-      <dependency ref="setuptools==75.1.0"/>
-      <dependency ref="wheel==0.44.0"/>
+      <dependency ref="setuptools==71.1.0"/>
     </dependency>
     <dependency ref="packaging==24.1"/>
-    <dependency ref="packvers==21.5">
-      <dependency ref="pyparsing==3.1.4"/>
+    <dependency ref="pip-licenses==5.0.0">
+      <dependency ref="prettytable==3.11.0"/>
+      <dependency ref="tomli==2.0.2"/>
     </dependency>
-    <dependency ref="parameter-expansion-patched==0.3.1"/>
-    <dependency ref="pdfminer.six==20240706">
-      <dependency ref="charset-normalizer==3.3.2"/>
-      <dependency ref="cryptography==43.0.1"/>
-    </dependency>
-    <dependency ref="pefile==2024.8.26"/>
     <dependency ref="pip-requirements-parser==32.0.1">
       <dependency ref="packaging==24.1"/>
       <dependency ref="pyparsing==3.1.4"/>
     </dependency>
-    <dependency ref="pip==24.2"/>
-    <dependency ref="pkginfo2==30.0.0"/>
-    <dependency ref="pluggy==1.5.0"/>
-    <dependency ref="plugincode==32.0.0">
-      <dependency ref="click==8.1.7"/>
-      <dependency ref="commoncode==32.0.0"/>
-      <dependency ref="pluggy==1.5.0"/>
+    <dependency ref="pip==24.1.2"/>
+    <dependency ref="prettytable==3.11.0">
+      <dependency ref="wcwidth==0.2.13"/>
     </dependency>
-    <dependency ref="ply==3.11"/>
-    <dependency ref="publicsuffix2==2.20191221"/>
     <dependency ref="py-serializable==1.1.2">
       <dependency ref="defusedxml==0.7.1"/>
     </dependency>
-    <dependency ref="pyahocorasick==2.1.0">
-      <dependency ref="setuptools==75.1.0"/>
-      <dependency ref="wheel==0.44.0"/>
-    </dependency>
     <dependency ref="pycparser==2.22"/>
-    <dependency ref="pygmars==0.9.0"/>
-    <dependency ref="pymaven-patch==0.3.2">
-      <dependency ref="lxml==5.3.0"/>
-      <dependency ref="requests==2.32.3"/>
-      <dependency ref="six==1.16.0"/>
-    </dependency>
-    <dependency ref="pyparsing==3.1.4">
-      <dependency ref="Jinja2==2.11.3"/>
+    <dependency ref="pyparsing==3.1.4"/>
+    <dependency ref="python-Levenshtein==0.25.1">
+      <dependency ref="Levenshtein==0.25.1"/>
     </dependency>
     <dependency ref="python-dateutil==2.9.0.post0">
       <dependency ref="six==1.16.0"/>
     </dependency>
-    <dependency ref="rdflib==7.0.0">
-      <dependency ref="html5lib==1.1"/>
-      <dependency ref="isodate==0.6.1"/>
-      <dependency ref="lxml==5.3.0"/>
-      <dependency ref="pyparsing==3.1.4"/>
+    <dependency ref="python-magic==0.4.27"/>
+    <dependency ref="rapidfuzz==3.9.7">
+      <dependency ref="numpy==2.0.1"/>
     </dependency>
     <dependency ref="referencing==0.35.1">
       <dependency ref="attrs==24.2.0"/>
       <dependency ref="rpds-py==0.20.0"/>
     </dependency>
     <dependency ref="requests==2.32.3">
-      <dependency ref="certifi==2024.8.30"/>
+      <dependency ref="certifi==2024.7.4"/>
       <dependency ref="chardet==5.2.0"/>
       <dependency ref="charset-normalizer==3.3.2"/>
-      <dependency ref="idna==3.10"/>
-      <dependency ref="urllib3==2.2.3"/>
+      <dependency ref="idna==3.7"/>
+      <dependency ref="urllib3==2.2.2"/>
     </dependency>
     <dependency ref="rfc3339-validator==0.1.4">
       <dependency ref="six==1.16.0"/>
     </dependency>
     <dependency ref="rfc3987==1.3.8"/>
     <dependency ref="rpds-py==0.20.0"/>
-    <dependency ref="saneyaml==0.6.1">
-      <dependency ref="PyYAML==3.13"/>
+    <dependency ref="scikit-learn==1.4.2">
+      <dependency ref="joblib==1.4.2"/>
+      <dependency ref="numpy==2.0.1"/>
+      <dependency ref="scipy==1.14.0"/>
+      <dependency ref="threadpoolctl==3.5.0"/>
     </dependency>
-    <dependency ref="scancode-toolkit==32.0.2">
-      <dependency ref="Jinja2==2.11.3"/>
-      <dependency ref="MarkupSafe==2.0.1"/>
-      <dependency ref="Pygments==2.18.0"/>
-      <dependency ref="attrs==24.2.0"/>
-      <dependency ref="beautifulsoup4==4.12.3"/>
-      <dependency ref="boolean.py==4.0"/>
-      <dependency ref="chardet==5.2.0"/>
-      <dependency ref="click==8.1.7"/>
-      <dependency ref="colorama==0.4.6"/>
-      <dependency ref="commoncode==32.0.0"/>
-      <dependency ref="container-inspector==33.0.0"/>
-      <dependency ref="debian_inspector==31.1.0"/>
-      <dependency ref="dparse2==0.7.0"/>
-      <dependency ref="fasteners==0.19"/>
-      <dependency ref="fingerprints==1.2.3"/>
-      <dependency ref="ftfy==6.2.3"/>
-      <dependency ref="gemfileparser2==0.9.4"/>
-      <dependency ref="html5lib==1.1"/>
-      <dependency ref="importlib_metadata==8.5.0"/>
-      <dependency ref="intbitset==3.1.0"/>
-      <dependency ref="jaraco.functools==4.1.0"/>
-      <dependency ref="javaproperties==0.8.1"/>
-      <dependency ref="jsonstreams==0.6.0"/>
-      <dependency ref="license-expression==30.3.1"/>
-      <dependency ref="lxml==5.3.0"/>
-      <dependency ref="packageurl-python==0.15.6"/>
-      <dependency ref="packvers==21.5"/>
-      <dependency ref="parameter-expansion-patched==0.3.1"/>
-      <dependency ref="pdfminer.six==20240706"/>
-      <dependency ref="pefile==2024.8.26"/>
-      <dependency ref="pip-requirements-parser==32.0.1"/>
-      <dependency ref="pkginfo2==30.0.0"/>
-      <dependency ref="pluggy==1.5.0"/>
-      <dependency ref="plugincode==32.0.0"/>
-      <dependency ref="publicsuffix2==2.20191221"/>
-      <dependency ref="pyahocorasick==2.1.0"/>
-      <dependency ref="pygmars==0.9.0"/>
-      <dependency ref="pymaven-patch==0.3.2"/>
-      <dependency ref="requests==2.32.3"/>
-      <dependency ref="saneyaml==0.6.1"/>
-      <dependency ref="spdx-tools==0.7.0rc0"/>
-      <dependency ref="text-unidecode==1.3"/>
-      <dependency ref="toml==0.10.2"/>
-      <dependency ref="typecode==30.0.2"/>
-      <dependency ref="urlpy==0.5"/>
-      <dependency ref="xmltodict==0.13.0"/>
-      <dependency ref="zipp==3.20.2"/>
+    <dependency ref="scipy==1.14.0">
+      <dependency ref="numpy==2.0.1"/>
+      <dependency ref="threadpoolctl==3.5.0"/>
     </dependency>
-    <dependency ref="setuptools==75.1.0">
-      <dependency ref="importlib_metadata==8.5.0"/>
-      <dependency ref="jaraco.functools==4.1.0"/>
-      <dependency ref="more-itertools==10.5.0"/>
+    <dependency ref="setuptools==71.1.0">
       <dependency ref="packaging==24.1"/>
-      <dependency ref="pip==24.2"/>
-      <dependency ref="wheel==0.44.0"/>
+      <dependency ref="pip==24.1.2"/>
+      <dependency ref="tomli==2.0.2"/>
     </dependency>
     <dependency ref="six==1.16.0"/>
     <dependency ref="sortedcontainers==2.4.0"/>
-    <dependency ref="soupsieve==2.6"/>
-    <dependency ref="spdx-tools==0.7.0rc0">
-      <dependency ref="PyYAML==3.13"/>
-      <dependency ref="click==8.1.7"/>
-      <dependency ref="ply==3.11"/>
-      <dependency ref="rdflib==7.0.0"/>
-      <dependency ref="xmltodict==0.13.0"/>
+    <dependency ref="soupsieve==2.5"/>
+    <dependency ref="ssdeep==3.4">
+      <dependency ref="cffi==1.16.0"/>
+      <dependency ref="six==1.16.0"/>
     </dependency>
-    <dependency ref="text-unidecode==1.3"/>
-    <dependency ref="toml==0.10.2"/>
-    <dependency ref="typecode==30.0.2">
-      <dependency ref="attrs==24.2.0"/>
-      <dependency ref="binaryornot==0.4.4"/>
-      <dependency ref="commoncode==32.0.0"/>
-      <dependency ref="pdfminer.six==20240706"/>
-      <dependency ref="plugincode==32.0.0"/>
-      <dependency ref="saneyaml==0.6.1"/>
+    <dependency ref="threadpoolctl==3.5.0"/>
+    <dependency ref="tomli==2.0.2"/>
+    <dependency ref="tqdm==4.66.4">
+      <dependency ref="requests==2.32.3"/>
     </dependency>
     <dependency ref="types-python-dateutil==2.9.0.20241003"/>
     <dependency ref="uri-template==1.3.0"/>
-    <dependency ref="urllib3==2.2.3"/>
-    <dependency ref="urlpy==0.5">
-      <dependency ref="publicsuffix2==2.20191221"/>
-    </dependency>
+    <dependency ref="urllib3==2.2.2"/>
     <dependency ref="wcwidth==0.2.13"/>
     <dependency ref="webcolors==24.8.0"/>
-    <dependency ref="webencodings==0.5.1"/>
-    <dependency ref="wheel==0.44.0">
-      <dependency ref="setuptools==75.1.0"/>
+    <dependency ref="xmonkey-lidy==1.0.12">
+      <dependency ref="click==8.1.7"/>
+      <dependency ref="python-Levenshtein==0.25.1"/>
+      <dependency ref="requests==2.32.3"/>
+      <dependency ref="tqdm==4.66.4"/>
     </dependency>
-    <dependency ref="xmltodict==0.13.0"/>
-    <dependency ref="zipp==3.20.2">
-      <dependency ref="jaraco.functools==4.1.0"/>
-      <dependency ref="more-itertools==10.5.0"/>
+    <dependency ref="xmonkey_namonica==0.1.35">
+      <dependency ref="beautifulsoup4==4.12.3"/>
+      <dependency ref="python-magic==0.4.27"/>
+      <dependency ref="requests==2.32.3"/>
+      <dependency ref="setuptools==71.1.0"/>
+      <dependency ref="tqdm==4.66.4"/>
+      <dependency ref="urllib3==2.2.2"/>
+      <dependency ref="xmonkey-lidy==1.0.12"/>
     </dependency>
   </dependencies>
 </bom>

@@ -1,4 +1,20 @@
-> Same current implementation for license data.
+## Generating Open Source Attributions for Projects using PyPI
+
+### Using CycloneDX BOM tool
+The prefered method to produce an OSPI (BOM with license information) for a PyPI project is to use the CycloneDX-BOM tool to generate a BOM, and then parse the BOM to produce a Legal Notices file.
+Assuming you are working inside a Python virtual enviroment:
 
 > pip install cyclonedx-bom
 > cyclonedx-py environment --gather-license-texts --of XML > bom.xml
+
+Once the BOM file is available, we can use a simple Python script to parse the data into an attribution notices. You can find an example <HERE>.
+> python3 bom2notices.py
+
+### Using PIP-Licenses to produce a list of packages
+
+Another option is to use the tool pip-licenses to generate a simplified BOM (KissBOM) in CSV format, and the same approach can be used to generate a Legal Notices file:
+
+> pip-licenses --from=mixed --with-url --format=csv > BOM.csv
+> pip-licenses --from=mixed --with-url --with-license-file --with-notice-file > Notice.txt
+
+This option is functional but more rudimentary than using CycloneDX-bom tooling.

@@ -9,3 +9,4 @@ Here are some examples for common languages and package managers on how to creat
 
 * Projects using Maven
 * Projects using Gradle
+* Projects using PyPI
