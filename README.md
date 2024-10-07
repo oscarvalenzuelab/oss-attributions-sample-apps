@@ -1,4 +1,4 @@
-# Generating Open Source License Attributions (Legal Notices) using SBOMs
+# Generating Open Source Legal Notices using SBOMs
 
 There's different approaches to generate Legal Notices, and while the most common depends on manually collecting information from the software artifacts, there are chances to use information from the package metadata troguht the package managers to produce an Open Source Package Inventory that later feed the generation of OSS attributions. While an Open Source Package Inventory (OSPI) is similar to an Software Build of Materials (SBoM), aren't usually the same as license attestation is not a requirement for a valid SBOM. Instead an OSPI presume that such information will be present in order to perform a risk evaluation for the project.
 
