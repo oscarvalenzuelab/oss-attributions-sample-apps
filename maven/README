@@ -9,7 +9,7 @@ Here is an example with an snippet to be added to the pom.xml file of your proje
     <plugin>
         <groupId>org.cyclonedx</groupId>
         <artifactId>cyclonedx-maven-plugin</artifactId>
-        <version>2.7.4</version>
+        <version>2.7.9</version>
         <executions>
             <execution>
                 <phase>package</phase>
