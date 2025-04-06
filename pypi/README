@@ -6,6 +6,7 @@ Assuming you are working inside a Python virtual enviroment:
 
 > pip install cyclonedx-bom
 > cyclonedx-py environment --gather-license-texts --of XML > bom.xml
+> cyclonedx-py environment --gather-license-texts --of JSON > bom.json
 
 Once the BOM file is available, we can use a simple Python script to parse the data into an attribution notices. You can find an example <HERE>.
 > python3 bom2notices.py
