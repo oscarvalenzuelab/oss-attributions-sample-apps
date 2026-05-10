@@ -6,6 +6,23 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
 
+  # Sample apps intentionally pin vulnerable dependency versions to
+  # demonstrate SBOM / OSS-attribution generation. Ignore all updates
+  # so Dependabot does not open PRs for these demo fixtures.
+  - package-ecosystem: "pip"
+    directory: "/pypi/vulnerable-sample-app"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+
+  - package-ecosystem: "maven"
+    directory: "/maven/sample-app"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

@@ -10,3 +10,7 @@ Here are some examples for common languages and package managers on how to creat
 * Projects using Maven
 * Projects using Gradle
 * Projects using PyPI
+
+## Note on sample apps
+
+The sample apps under `pypi/vulnerable-sample-app/` and `maven/sample-app/` intentionally pin known-vulnerable dependency versions (e.g. `Django==1.11.29`, `requests==2.19.1`, `PyYAML==3.12`). They exist as fixtures to demonstrate SBOM and OSS-attribution generation against realistic, version-locked manifests — not as code intended to be deployed. Dependabot is configured to skip update PRs for these paths; security alerts may still surface in the dependency graph and are kept as documentation of the demo's vulnerability surface.
